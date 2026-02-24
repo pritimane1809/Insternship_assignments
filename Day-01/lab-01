@@ -1,0 +1,12 @@
+Lab -01 - User management
+Create user 
+
+Here it creates user priti using command ‘adduser’
+
+Switch user 
+
+It switches user using ‘su’ command
+
+Verify Home directory
+
+
