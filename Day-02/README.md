@@ -1,5 +1,7 @@
-Day 2                                                     
+Day 2     
+
 Lab-01: Completed SSH key setup:
+
 ·       Generated SSH key pair
 ·       Copied public key to remote server
 ·       Disabled password authentication
