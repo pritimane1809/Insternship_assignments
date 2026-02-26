@@ -49,3 +49,7 @@ Task 7 : Simulate firewall restrictions (UFW)
 - Only ports 80 and 443 allowed
 - SSH blocked (port 22)
 - SSH restricted
+
+Task 8 : Create a Local Domain Using /etc/hosts
+
+This task demonstrates local DNS resolution using the /etc/hosts file. By adding the entry 127.0.0.1 mytest.local, we map a custom domain name to the local machine (localhost).
