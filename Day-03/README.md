@@ -16,4 +16,14 @@ Task 2 : Test Internet Connectivity Flow
 - Confirmed DNS resolution by pinging google.com.
 - Used traceroute to analyze network path and identify intermediate hops.
 - Verified end-to-end connectivity
+
+Task 3 : Analyze DNS in Detail
+
+After analysing following are the output:
+
+IP Address: 142.250.70.110
+
+DNS Server: 172.30.32.1
+
+Response Time: 12 msec
   
