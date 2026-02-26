@@ -19,11 +19,14 @@ Task 2 : Test Internet Connectivity Flow
 
 Task 3 : Analyze DNS in Detail
 
-After analysing following are the output:
+- After analysing following are the output:
+- IP Address: 142.250.70.110
+- DNS Server: 172.30.32.1
+- Response Time: 12 msec
 
-IP Address: 142.250.70.110
+Task 4 : Host a Simple Website Locally
 
-DNS Server: 172.30.32.1
-
-Response Time: 12 msec
+- Installed ngnix
+- tested through localhost
+- tested through browser
   
