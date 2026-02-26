@@ -9,3 +9,11 @@ Task 1 : Verify Your Systemʼs Network Identity
 - Ping Domain = ping google.com
 - Use dig = dig google.com
 - Use traceroute = traceroute google.com
+
+Task 2 : Test Internet Connectivity Flow
+
+- Successfully verified internet connectivity by pinging 8.8.8.8.
+- Confirmed DNS resolution by pinging google.com.
+- Used traceroute to analyze network path and identify intermediate hops.
+- Verified end-to-end connectivity
+  
