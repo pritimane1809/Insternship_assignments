@@ -36,3 +36,9 @@ Task 5 : Check Listening ports
 - Stopped Nginx service.
 - Confirmed port 80 disappeared from listening ports.
 - Successfully validated web server status
+
+Task 6 : Test application connectivity
+
+- Used curl -I to verify HTTP headers and server response.
+- Observed status code 200 OK indicating server is active.
+- Used wget to download web content.
