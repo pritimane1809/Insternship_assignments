@@ -29,4 +29,10 @@ Task 4 : Host a Simple Website Locally
 - Installed ngnix
 - tested through localhost
 - tested through browser
-  
+
+Task 5 : Check Listening ports
+
+- Verified port 80 was listening.
+- Stopped Nginx service.
+- Confirmed port 80 disappeared from listening ports.
+- Successfully validated web server status
