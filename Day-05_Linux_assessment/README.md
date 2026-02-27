@@ -119,6 +119,11 @@
 9. Logs (Practical):
 
     - Showed the last 20 lines of system logs using journalctl
+
+<img width="1126" height="398" alt="Que-9" src="https://github.com/user-attachments/assets/628c3b1c-26a4-4c5c-a7a4-55495b34c978" />
+
+
+
     - If a web server is installed, logs are usually stored under /var/log/. For Apache deafault log location is /var/log/apache2/ and for Nginx the deafault log location is /var/log/nginx/
 
 
