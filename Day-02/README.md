@@ -21,10 +21,22 @@ Lab-02: Completed Cron Job lab:
 
 ·       Verified cron execution and log rotation
 
+<img width="1445" height="651" alt="Lab-2" src="https://github.com/user-attachments/assets/c473487e-61bf-4db2-b297-027d558f7ecd" />
+
+
 Lab-03: Completed Systemd Timer lab:
 
 ·       Created a custom script to write logs
 
+<img width="709" height="432" alt="Lab-3 1" src="https://github.com/user-attachments/assets/7d9e05ae-e95b-4fd4-9968-48f5d85a9888" />
+
+
 ·       Configured systemd service file
 
+<img width="1328" height="535" alt="Lab-3 2" src="https://github.com/user-attachments/assets/aaa1e5cc-15e5-410b-a29a-22dca66d5878" />
+
+
 ·       Created and enabled systemd timer
+
+<img width="1781" height="654" alt="Lab-3 3,3 4" src="https://github.com/user-attachments/assets/8b1219e1-61c0-4c86-9bd6-e906383b9148" />
+
