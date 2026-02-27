@@ -13,3 +13,6 @@ Homework -02 : Which process uses most memeory?
 
 From the below screeshot, PID 417 with root user uses most memory
 
+<img width="1366" height="597" alt="H-2" src="https://github.com/user-attachments/assets/7f3dd21e-378c-4d65-9b11-8e429b95098e" />
+
+
