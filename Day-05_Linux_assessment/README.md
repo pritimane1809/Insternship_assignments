@@ -137,7 +137,11 @@
 <img width="418" height="102" alt="Que-11-11 2" src="https://github.com/user-attachments/assets/b0b84695-6cd1-4d1e-b718-c766d6254638" />
 
 
+Bonus questions:
 
+Compare cron vs systemd timers in one line.
+
+- cron is a basic tool that runs the task at fixed time whereas systemd timer is more advanced way to run task in controlled manner.
 
 
 
