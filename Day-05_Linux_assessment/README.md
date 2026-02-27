@@ -40,5 +40,12 @@
 4. Package management (Practical):
 
    - Installed htop using 'sudo apt install htop'
+
+<img width="930" height="524" alt="Que-4-4 1" src="https://github.com/user-attachments/assets/237a0f09-ff96-4ea1-b2cc-96c6c8bf567a" />
+
+
    - The file /bin/bash is provided by the package bash.
+
+<img width="1359" height="221" alt="Que-4-4 2" src="https://github.com/user-attachments/assets/8294f86c-3931-49b1-bfae-83aa858a921a" />
+
    
