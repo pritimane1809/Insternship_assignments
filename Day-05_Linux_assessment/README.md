@@ -27,7 +27,13 @@
      Public key → /home/acer/.ssh/id_ed25519.pub
 
    - Added public key to authorized_keys
+
+     <img width="885" height="507" alt="Que-3-3 1" src="https://github.com/user-attachments/assets/301f65e3-bc39-4505-a8ff-5b9a45879d80" />
+
   
    - tested passwordless login to localhost
+
+     <img width="690" height="305" alt="Que-3-3 2" src="https://github.com/user-attachments/assets/68a57c2d-6ab3-42d4-b81e-eabdb059f2d7" />
+
    
    
