@@ -98,6 +98,12 @@
 <img width="517" height="323" alt="Que-7-7 6" src="https://github.com/user-attachments/assets/e81d073f-01c6-4508-8a2e-60c5d477b0ca" />
 
 
+<img width="514" height="126" alt="Que-7-7 7" src="https://github.com/user-attachments/assets/770bcba5-482a-495e-a166-1708aec48c55" />
+
+<img width="768" height="156" alt="Que-7-7 8" src="https://github.com/user-attachments/assets/2d43e44c-f135-41de-afd9-1d13f7f5fa7b" />
+
+
+
 8. Monitoring (Practical):
    - Checked overall disk usage and checked the size of /var/log directory
 
@@ -127,6 +133,12 @@
     - If a web server is installed, logs are usually stored under /var/log/. For Apache deafault log location is /var/log/apache2/ and for Nginx the deafault log location is /var/log/nginx/
 
 10. Network troubleshooting (Practical):
+
+<img width="512" height="136" alt="Que-10-10 1" src="https://github.com/user-attachments/assets/6d8282c1-2f0f-4d60-bd9f-acf6d2f60e27" />
+
+
+<img width="726" height="159" alt="Que-10-10 2" src="https://github.com/user-attachments/assets/558c706b-8da9-4df5-b041-5f5d185e33e6" />
+
 
 
 11. Wrote a script to check the disk usage
