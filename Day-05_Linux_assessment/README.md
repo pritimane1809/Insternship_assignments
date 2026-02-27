@@ -61,9 +61,17 @@
 6. Systemd timer (Practical):
 
    - Created the service file
+
+<img width="630" height="175" alt="Que-6-6 1" src="https://github.com/user-attachments/assets/fb2a9b3c-e487-4e2a-a939-726f7ad035a5" />
+
    - Created the timer file
+
+<img width="417" height="190" alt="Que-6-6 2" src="https://github.com/user-attachments/assets/bb9a426d-b6cf-4af7-9a72-eb2757b24d9e" />
+
    - Enabled the timer
    - showed it in systemctl list-timers 
+
+<img width="1119" height="343" alt="Que-6-6 3" src="https://github.com/user-attachments/assets/dc0212e2-236c-4827-b689-1b6dd5bcc841" />
 
 
 
