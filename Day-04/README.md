@@ -9,3 +9,7 @@ Homework -01 : countargs.sh
 - executed the script using 'bash' command and passed the three arguments "apple banana mango". Hence the result as shown in screenshot.
   <img width="509" height="159" alt="H-1" src="https://github.com/user-attachments/assets/3fb146cd-7ca2-42b6-a752-8deb3c0295f4" />
 
+Homework -02 : Which process uses most memeory?
+
+From the below screeshot, PID 417 with root user uses most memory
+
