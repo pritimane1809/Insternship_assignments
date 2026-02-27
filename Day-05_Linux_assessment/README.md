@@ -16,5 +16,18 @@
 
    <img width="508" height="122" alt="Que-2" src="https://github.com/user-attachments/assets/02b22ac4-85f0-4347-860e-073200f2d99d" />
 
+
+3. SSH (Practical):
+   - Generate an SSH keypair
+     
+      This creates:
+
+     Private key → /home/acer/.ssh/id_ed25519
+
+     Public key → /home/acer/.ssh/id_ed25519.pub
+
+   - Added public key to authorized_keys
+  
+   - tested passwordless login to localhost
    
    
