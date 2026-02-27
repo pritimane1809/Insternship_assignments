@@ -126,7 +126,10 @@
 
     - If a web server is installed, logs are usually stored under /var/log/. For Apache deafault log location is /var/log/apache2/ and for Nginx the deafault log location is /var/log/nginx/
 
+10. Network troubleshooting (Practical):
 
+
+11. Wrote a script to check the disk usage
 
 
 
