@@ -57,3 +57,24 @@
 
 <img width="412" height="199" alt="Que-5" src="https://github.com/user-attachments/assets/58a9632b-fc1a-4990-b872-cc5ce47b942f" />
 
+
+6. Systemd timer (Practical):
+
+   - Created the service file
+   - Created the timer file
+   - Enabled the timer
+   - showed it in systemctl list-timers 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
