@@ -48,4 +48,8 @@
 
 <img width="1359" height="221" alt="Que-4-4 2" src="https://github.com/user-attachments/assets/8294f86c-3931-49b1-bfae-83aa858a921a" />
 
-   
+
+5. Cron (Practical):
+
+- Created cron job that runs /usr/bin/date every minute
+- Output appended to /tmp/cron_test.log
