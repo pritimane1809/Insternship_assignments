@@ -9,4 +9,8 @@
 
      <img width="415" height="136" alt="Que-1" src="https://github.com/user-attachments/assets/0873a9f4-566b-4862-9d7a-4966c80aefea" />
 
+
+2. Users (Practical):
+   - created user named intern1 with /bin/bash as default shell
+   
    
