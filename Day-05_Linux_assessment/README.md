@@ -12,5 +12,9 @@
 
 2. Users (Practical):
    - created user named intern1 with /bin/bash as default shell
+     
+
+   <img width="508" height="122" alt="Que-2" src="https://github.com/user-attachments/assets/02b22ac4-85f0-4347-860e-073200f2d99d" />
+
    
    
