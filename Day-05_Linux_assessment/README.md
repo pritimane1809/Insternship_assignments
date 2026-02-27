@@ -98,7 +98,14 @@
 <img width="517" height="323" alt="Que-7-7 6" src="https://github.com/user-attachments/assets/e81d073f-01c6-4508-8a2e-60c5d477b0ca" />
 
 
+8. Monitoring (Practical):
+   - Checked overall disk usage and checked the size of /var/log directory
+   - showed top 3 processes by memory
+            ps aux → shows all running processes
+           --sort=-%mem → sorts by memory usage (highest first)
+           head -4 → shows header + top 3 processes
 
+- Showed the last 20 lines of the systemd journal and the last 20 lines of /var/log/syslog
 
 
 
