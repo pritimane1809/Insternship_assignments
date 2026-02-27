@@ -53,3 +53,7 @@
 
 - Created cron job that runs /usr/bin/date every minute
 - Output appended to /tmp/cron_test.log
+
+
+<img width="412" height="199" alt="Que-5" src="https://github.com/user-attachments/assets/58a9632b-fc1a-4990-b872-cc5ce47b942f" />
+
