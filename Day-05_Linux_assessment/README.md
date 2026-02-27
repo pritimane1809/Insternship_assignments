@@ -77,10 +77,26 @@
 7. Network (Practical):
 
    - Pinged Google DNS
+
+<img width="533" height="191" alt="Que-7-7 1" src="https://github.com/user-attachments/assets/2da9e9b4-1a13-4b42-88be-d2ffcd2a8b94" />
+
    - Traceroute to example.com
+
+<img width="1074" height="240" alt="Que-7-7 2" src="https://github.com/user-attachments/assets/cb81577f-f056-4a47-a5ce-62e6ae01fd67" />
+
    - showing listening tcp processes
+
+<img width="1318" height="238" alt="Que-7-7 3" src="https://github.com/user-attachments/assets/1d657961-d862-461d-8eda-a0cecd293c04" />
+
+
    - checked if port 80 is open locally
+
+<img width="1366" height="116" alt="Que-7-7 4" src="https://github.com/user-attachments/assets/c39669ee-eaa0-4c6f-945f-e9ee72f425c8" />
+
    - Showed HTTP headers & DNS A record
+
+<img width="517" height="323" alt="Que-7-7 6" src="https://github.com/user-attachments/assets/e81d073f-01c6-4508-8a2e-60c5d477b0ca" />
+
 
 
 
