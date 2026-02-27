@@ -5,8 +5,9 @@ Lab - 01 :  Disk Monitoring Script
 
 Lab -02 : capture HttP traffic
 
-<img width="1366" height="768" alt="Lab-2-Terminal2" src="https://github.com/user-attachments/assets/ba27ebec-29bd-47ed-9ec2-9a8628e34b6a" />
-<img width="1366" height="768" alt="Lab-2-Terminal1" src="https://github.com/user-attachments/assets/6eb6422b-600e-42f3-ac8e-f950a126fb5d" />
+<img width="1366" height="163" alt="Lab-2-Terminal2" src="https://github.com/user-attachments/assets/c30f1c66-b871-467e-b382-9d5cb0f79e14" />
+<img width="1366" height="717" alt="Lab-2-Terminal1" src="https://github.com/user-attachments/assets/e05de3b8-a7b2-4317-b8ec-d6f3357efbd1" />
+
 
 
 Homework -01 : countargs.sh
