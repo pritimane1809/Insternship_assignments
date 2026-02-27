@@ -131,7 +131,10 @@
 
 11. Wrote a script to check the disk usage
 
+<img width="533" height="239" alt="Que-11-1 1" src="https://github.com/user-attachments/assets/1cf10a1b-5c1b-4fb6-a9f2-0466330334c9" />
 
+
+<img width="418" height="102" alt="Que-11-11 2" src="https://github.com/user-attachments/assets/b0b84695-6cd1-4d1e-b718-c766d6254638" />
 
 
 
