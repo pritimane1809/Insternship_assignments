@@ -18,5 +18,10 @@
 
 - Create a git branch out of the main/master branch, do changes and commits, and create a PR for the same using git best practices.
 
+  <img width="1040" height="585" alt="07" src="https://github.com/user-attachments/assets/eaaea43f-24d5-4f81-aa92-bd7b52d718ea" />
+<img width="924" height="412" alt="06" src="https://github.com/user-attachments/assets/0b175fe0-ca6d-4dc3-bff7-d5e94c17924a" />
+<img width="1096" height="742" alt="05" src="https://github.com/user-attachments/assets/86d83263-8d33-4caf-bbd5-aaec6ea95500" />
+
+
   
   
