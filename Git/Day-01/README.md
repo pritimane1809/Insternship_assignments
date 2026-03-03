@@ -8,4 +8,15 @@
 <img width="989" height="431" alt="Screenshot (611)" src="https://github.com/user-attachments/assets/5805682c-5b3a-4176-8efc-e8b353267649" />
 
 
-- 
+
+- Create a directory called git-training , initialize git repo, create two files readme.md and app.py , stage and commit the changes
+
+<img width="1196" height="820" alt="04" src="https://github.com/user-attachments/assets/cc6adfe8-8ba3-4979-b937-da398ef57980" />
+<img width="1019" height="337" alt="03" src="https://github.com/user-attachments/assets/aa362cee-6c64-4cb9-a12e-7e82b545c72f" />
+
+
+
+- Create a git branch out of the main/master branch, do changes and commits, and create a PR for the same using git best practices.
+
+  
+  
