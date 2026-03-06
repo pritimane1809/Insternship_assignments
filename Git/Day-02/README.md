@@ -56,6 +56,36 @@ Finally pushed
 Scenario 3 – Merge Conflict in Team Environment
 
 
+<img width="996" height="659" alt="01" src="https://github.com/user-attachments/assets/b1756d98-333e-42e0-a1f4-771406bf2a69" />
+
+
+- Committed payment module on feature/ payment branch
+  
+
+<img width="1002" height="634" alt="02" src="https://github.com/user-attachments/assets/e1527439-c828-470e-b735-387216b7cf84" />
+
+- Committed same payment module on main branch
+
+
+<img width="952" height="490" alt="03" src="https://github.com/user-attachments/assets/6f84aa56-cfc1-4b42-b6ae-b122acb2f2de" />
+
+
+- Tried merging it on main branch but merge conflict arised
+
+
+  <img width="462" height="236" alt="04" src="https://github.com/user-attachments/assets/02b32ef4-ae58-42d3-bc79-e720fef11fd3" />
+
+
+  - conflict marker
+ 
+  <img width="941" height="1022" alt="05" src="https://github.com/user-attachments/assets/d3c09d41-8a07-4fb9-a8f9-edd1cd3471dc" />
+
+  Mannually resolved merge conflict
+
+
+
+
+
 
 
 
