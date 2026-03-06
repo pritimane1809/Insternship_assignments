@@ -27,3 +27,64 @@ Scenario 1 – Wrong Branch Commit
 
 
 
+
+
+
+ Scenario 2 – Bad Commit Already Pushed
+
+<img width="1003" height="609" alt="01" src="https://github.com/user-attachments/assets/415db19c-3f6e-4967-bdd8-1994c254da49" />
+
+
+- The above screenshot shows that I did bad commit of app.conf
+
+
+<img width="778" height="303" alt="02" src="https://github.com/user-attachments/assets/66aba7d6-60d2-4e53-ade0-2564d4bc76c1" />
+
+- Now I safely undo the changes
+
+
+<img width="723" height="228" alt="03" src="https://github.com/user-attachments/assets/d12fb4c4-6fcb-4113-89b9-627cf4f1d0d7" />
+
+
+<img width="798" height="239" alt="04" src="https://github.com/user-attachments/assets/be52fd80-4581-47a9-8700-6c90516da329" />
+
+
+Finally pushed
+
+
+
+Scenario 3 – Merge Conflict in Team Environment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
