@@ -51,6 +51,10 @@ If increased:
 Server can handle more simultaneous users
 
 
+<img width="904" height="205" alt="02" src="https://github.com/user-attachments/assets/5650e044-4a6e-41d9-b1db-dd0449795f95" />
+
+
+
 
 
 
