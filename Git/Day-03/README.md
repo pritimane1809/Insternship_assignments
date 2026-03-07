@@ -25,7 +25,30 @@ Task 2: Explore the NGINX config hierarchy
 
 <img width="1366" height="768" alt="01" src="https://github.com/user-attachments/assets/92b44d2e-15f5-4505-8ced-957333ac88b9" />
 
+worker_processes: 
 
+Meaning:
+
+Number of worker processes nginx runs
+
+auto = nginx automatically uses the number of CPU cores.
+
+If changed:
+
+Higher value → more parallel processing
+
+Too high → wastes CPU resources
+
+
+worker_connections
+
+Meaning:
+
+Maximum connections one worker process can handle simultaneously
+
+If increased:
+
+Server can handle more simultaneous users
 
 
 
