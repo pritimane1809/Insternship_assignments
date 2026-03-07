@@ -60,3 +60,8 @@ default site is enabled
 
 
 
+Task 3 :  Host a multi-page static site
+
+
+
+
