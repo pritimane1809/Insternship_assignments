@@ -58,6 +58,15 @@ symbolic links (symlinks) pointing to files in sites-available.
 default site is enabled
 
 
+Task 3 :
+
+<img width="927" height="390" alt="01" src="https://github.com/user-attachments/assets/5e1f7c06-b9df-4576-965e-e219154df3bf" />
+
+
+<img width="894" height="293" alt="02" src="https://github.com/user-attachments/assets/178256a6-9e96-4810-ae66-a18a96e9bc84" />
+
+
+
 
 
 Task 3 :  Host a multi-page static site
