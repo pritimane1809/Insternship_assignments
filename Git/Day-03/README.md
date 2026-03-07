@@ -58,7 +58,7 @@ symbolic links (symlinks) pointing to files in sites-available.
 default site is enabled
 
 
-Task 3 :
+Task 3 :  Host a multi-page static site
 
 <img width="927" height="390" alt="01" src="https://github.com/user-attachments/assets/5e1f7c06-b9df-4576-965e-e219154df3bf" />
 
@@ -68,8 +68,16 @@ Task 3 :
 
 
 
-
-Task 3 :  Host a multi-page static site
+ - Created a website directory at /var/www/mysite.local.
+ - Added three web pages: index.html, about.html, and contact.html.
+ - Configured an NGINX server block in /etc/nginx/sites-available/mysite.local to serve the website.
+ - Enabled the site by creating a symbolic link in /etc/nginx/sites-enabled.
+ - Added mysite.local to /etc/hosts to map it to 127.0.0.1.
+ - Reloaded NGINX and verified that all pages load correctly using:
+ - curl http://mysite.local
+ - curl http://mysite.local/about.html
+ - curl http://mysite.local/contact.html
+ - Tested a non-existent page and confirmed that NGINX correctly returns a 404 Not Found error.
 
 
 
