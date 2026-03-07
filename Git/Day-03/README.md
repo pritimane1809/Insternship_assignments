@@ -21,4 +21,8 @@ Task 1: Test all NGINX management commands
   <img width="1069" height="272" alt="06" src="https://github.com/user-attachments/assets/dc480186-b21d-488a-be58-04277e3a08c4" />
 
 
+Task 2: Explore the NGINX config hierarchy
+
+
+
 
