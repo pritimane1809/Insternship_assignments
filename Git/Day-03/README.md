@@ -108,3 +108,20 @@ Run twodocker containers : nginx:alpine on port 8081 and traefik/whoami on port 
 
 
 
+Task 5: Multiple sites
+
+<img width="850" height="595" alt="01" src="https://github.com/user-attachments/assets/c480dbbd-74ae-4c05-a213-29cd8acf91b2" />
+
+
+<img width="635" height="306" alt="02" src="https://github.com/user-attachments/assets/f9ea216f-a433-40db-92e2-32d4c1f5597e" />
+
+
+<img width="875" height="233" alt="03" src="https://github.com/user-attachments/assets/a59b38c2-dbf1-4633-9a6d-6a1e079e0cc5" />
+
+
+
+
+
+
+
+
