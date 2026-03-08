@@ -98,6 +98,11 @@ Run twodocker containers : nginx:alpine on port 8081 and traefik/whoami on port 
 
 
 
+- Two Docker containers running
+- Reverse proxy configured
+- Two location blocks working
+- X-Real-IP header confirmed >> 127.0.0.1
+
 
 
 
