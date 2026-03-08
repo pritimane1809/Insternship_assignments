@@ -81,4 +81,23 @@ Task 3 :  Host a multi-page static site
 
 
 
+Task 4 : Reverse proxy and docker
+
+<img width="1366" height="768" alt="01" src="https://github.com/user-attachments/assets/989fedf7-c4a2-4cc9-aa6c-9203d1691978" />
+
+Run twodocker containers : nginx:alpine on port 8081 and traefik/whoami on port 8082
+
+
+
+<img width="1366" height="768" alt="02" src="https://github.com/user-attachments/assets/c4041e70-f802-4892-9215-9f805498dcd5" />
+
+
+
+<img width="1366" height="768" alt="03" src="https://github.com/user-attachments/assets/9b1293c0-a2fb-47bc-a2c5-70b09bff7e48" />
+
+
+
+
+
+
 
