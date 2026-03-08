@@ -120,6 +120,15 @@ Task 5: Multiple sites
 
 
 
+- Created two virtual host websites app1.local and app2.local in NGINX by setting up separate directories under /var/www
+- added unique HTML pages for each site.
+- Configured server blocks in /etc/nginx/sites-available and enabled them using symbolic links in /etc/nginx/sites-enabled.
+- Added domain entries for both sites in /etc/hosts and verified they were accessible through the browser.
+- Then disabled app2.local by removing its symlink and confirmed that app1.local still worked while app2.local returned an error.
+- Finally, re-enabled app2.local and reloaded NGINX to restore access to both sites.
+
+
+
 
 
 
