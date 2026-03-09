@@ -128,6 +128,14 @@ Task 5: Multiple sites
 - Finally, re-enabled app2.local and reloaded NGINX to restore access to both sites.
 
 
+Task 6 : Troubleshooting
+
+<img width="1363" height="421" alt="Screenshot (653)" src="https://github.com/user-attachments/assets/c49b2c50-45b8-4b9b-a76d-152a3c72921a" />
+
+
+<img width="1900" height="240" alt="Screenshot (655)" src="https://github.com/user-attachments/assets/9c67aaf8-e443-4f63-9a2e-4707f6cc0fa5" />
+
+
 
 
 
