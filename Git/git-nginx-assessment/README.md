@@ -274,3 +274,24 @@ Indicates whether the original request was made using HTTP or HTTPS.
 
 These headers are important for correct logging, security tracking,
 and application behavior behind proxies.
+
+
+
+PRACTICAL 06  |  SSL/TLS, Load Balancing & Merge Conflict Resolution
+
+6a.
+
+<img width="1920" height="1080" alt="6a-1" src="https://github.com/user-attachments/assets/d754d18a-3f55-450e-97b7-87115baf8f4f" />
+
+<img width="1014" height="1000" alt="6a-2" src="https://github.com/user-attachments/assets/291bf786-c1a0-4861-a973-79ea868429cb" />
+
+
+6b.
+
+<img width="1318" height="816" alt="6b" src="https://github.com/user-attachments/assets/e250540b-7374-49ff-856d-c1f8e57b9255" />
+
+
+6c.
+
+
+
