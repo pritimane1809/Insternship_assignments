@@ -120,3 +120,18 @@ This commit documents the new feature.
 
 <img width="998" height="492" alt="2g" src="https://github.com/user-attachments/assets/7fecef40-ac0f-41ea-94fa-5b2155a7dd9b" />
 
+
+
+PRACTICAL 03  |  Stash, Undo & History (Revert, Reset, Amend)
+
+3a.
+
+- git checkout → switches branches
+- -b → creates a new branch
+- bugfix/stash-demo → follows Git naming practice
+- git stash temporarily saves uncommitted changes so you can work on something else without committing incomplete work.
+- git stash pop restores the latest stash
+3b.
+3c.
+3d.
+
