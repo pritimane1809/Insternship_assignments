@@ -94,9 +94,6 @@ PRACTICAL 02  |  Branching, Committing & Pull Request Workflow
 
 2d.
 
-- This commit documents the new feature.
-
-
 2e.
 2f.
 2g.
