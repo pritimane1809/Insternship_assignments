@@ -31,8 +31,7 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
 
 1d.
 
-- echo: Prints text to the terminal.
-- > : Redirects output into a file.
+- echo: Prints text to the terminal
 - README.md: Markdown file used to describe the project.
 - app.py: Python script containing a simple print statement.
 1e.
