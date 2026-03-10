@@ -104,5 +104,8 @@ This commit documents the new feature.
 - git push → uploads commits to remote repository
 - origin → default remote name
 - feature/add-calculator → branch being pushed
+
+  <img width="804" height="311" alt="2e" src="https://github.com/user-attachments/assets/0f1b311a-e102-4e84-bced-7cb2480948a4" />
+
 2f.
 2g.
