@@ -11,6 +11,11 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
   <img width="782" height="717" alt="1a" src="https://github.com/user-attachments/assets/94c5ec11-1766-4356-926e-5d008c06ad86" />
 
 1b.
+
+- git config: Used to configure Git settings.
+- --global: Applies this configuration to all repositories for the current user.
+- user.name: Sets the author name for commits.
+- user.email: Sets the email associated with commits.
 1c.
 1d.
 1e.
