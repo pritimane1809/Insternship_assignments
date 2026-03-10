@@ -58,3 +58,21 @@ git log displays the commit history including:
 
 
 <img width="530" height="148" alt="1f" src="https://github.com/user-attachments/assets/77960916-468b-4f1d-933c-dd2e3260631c" />
+
+
+
+
+PRACTICAL 02  |  Branching, Committing & Pull Request Workflow 
+
+2a.
+
+- git checkout → switches branches
+- -b → creates a new branch
+- feature/add-calculator → branch name following best practice
+- feature/ prefix indicates a new feature
+2b.
+2c.
+2d.
+2e.
+2f.
+2g.
