@@ -146,5 +146,9 @@ PRACTICAL 03  |  Stash, Undo & History (Revert, Reset, Amend)
 3c.
 
 - git commit --amend: modifies last commit; can change commit message, files in commit
+
+
+  <img width="993" height="444" alt="3c" src="https://github.com/user-attachments/assets/be1ea6cc-2234-4a63-9fc5-56efc35e75a4" />
+
 3d.
 
