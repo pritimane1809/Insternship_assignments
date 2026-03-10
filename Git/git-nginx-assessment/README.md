@@ -139,6 +139,10 @@ PRACTICAL 03  |  Stash, Undo & History (Revert, Reset, Amend)
 
 - git revert undoes a commit safely
 - Instead of deleting history, it creates a new commit that reverses the changes
+
+<img width="913" height="311" alt="Screenshot (96)" src="https://github.com/user-attachments/assets/ac6a8b89-331d-49b5-8334-b1d7ce11cfa6" />
+
+
 3c.
 3d.
 
