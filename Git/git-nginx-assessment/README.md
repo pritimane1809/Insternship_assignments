@@ -55,3 +55,6 @@ git log displays the commit history including:
 - Author – person who made the commit
 - Date – when the commit was made
 - Commit message – description of the change
+
+
+<img width="530" height="148" alt="1f" src="https://github.com/user-attachments/assets/77960916-468b-4f1d-933c-dd2e3260631c" />
