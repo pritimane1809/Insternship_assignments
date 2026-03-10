@@ -156,3 +156,5 @@ PRACTICAL 03  |  Stash, Undo & History (Revert, Reset, Amend)
 - --soft → keeps changes staged
 - HEAD~1 → go back one commit
 
+<img width="973" height="610" alt="3d" src="https://github.com/user-attachments/assets/d9848aff-70ee-45c7-9924-c157074e0aa8" />
+
