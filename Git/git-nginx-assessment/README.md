@@ -114,3 +114,9 @@ This commit documents the new feature.
 
 
 2g.
+
+- git checkout -b main → switch to main branch
+- git pull origin main → download merged changes
+
+<img width="998" height="492" alt="2g" src="https://github.com/user-attachments/assets/7fecef40-ac0f-41ea-94fa-5b2155a7dd9b" />
+
