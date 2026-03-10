@@ -208,3 +208,10 @@ Why symlinks are used: This allows:
 
   <img width="1230" height="225" alt="4e" src="https://github.com/user-attachments/assets/893e44ff-3edc-49ed-be40-0aab52b4bd2b" />
 
+
+4f. 
+
+Tested the app
+
+
+<img width="667" height="231" alt="4f" src="https://github.com/user-attachments/assets/68fc96cb-e9ce-4a15-8520-188a4f4aac72" />
