@@ -165,7 +165,6 @@ PRACTICAL 04  |  NGINX Install, Config & Hosting Multiple Static Sites
 
 4a.
 
-
 - sudo apt update : Updates the Ubuntu package repository list
 - sudo apt install nginx -y: Installs the NGINX web server
 - systemctl status nginx: Shows whether NGINX is running
@@ -175,6 +174,37 @@ PRACTICAL 04  |  NGINX Install, Config & Hosting Multiple Static Sites
 <img width="1920" height="1080" alt="4a" src="https://github.com/user-attachments/assets/53e1c24f-17d8-4c0b-b8ba-db42ffe6d071" />
 
 4b.
+
+nginx -t:
+- Tests NGINX configuration files
+- Detects syntax errors
+- Prevents server crash after reload
+
+
+<img width="902" height="174" alt="4b" src="https://github.com/user-attachments/assets/3fcff02e-d30c-499e-9d6c-8fbe104acd0d" />
+
+
 4c.
+
+- mkdir creates directories
+- -p creates parent folders automatically
+
+  <img width="982" height="285" alt="4c" src="https://github.com/user-attachments/assets/b36b01c3-7915-4d84-881a-d593dc796f4d" />
+
 4d.
+
+Location of configs: /etc/nginx/sites-available/
+
+<img width="1323" height="374" alt="4d-1" src="https://github.com/user-attachments/assets/35a3e9b3-274f-492b-bab0-911466c6d9cd" />
+
+<img width="973" height="180" alt="4d-2" src="https://github.com/user-attachments/assets/206dbfde-3be0-41c4-9dcd-dad149cb997b" />
+
+
 4e.
+
+Why symlinks are used: This allows:
+- Easy enable/disable sites
+- Keeps configs organized
+
+  <img width="1230" height="225" alt="4e" src="https://github.com/user-attachments/assets/893e44ff-3edc-49ed-be40-0aab52b4bd2b" />
+
