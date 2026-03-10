@@ -20,11 +20,15 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
 
 <img width="678" height="282" alt="1b" src="https://github.com/user-attachments/assets/66fc28b6-1f86-4cd4-92ab-d3c4a6927901" />
 
+
 1c.
 
 - mkdir git-nginx-assessment: Creates a new directory for the project.
 - cd git-nginx-assessment: Moves into the project directory.
 - git init: Initializes a new Git repository and creates a hidden .git folder which tracks changes.
+
+  <img width="670" height="271" alt="1c" src="https://github.com/user-attachments/assets/5df8f5ec-7cec-4a26-86de-17a765d633da" />
+
 1d.
 1e.
 1f.
