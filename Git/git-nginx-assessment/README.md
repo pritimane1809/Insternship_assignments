@@ -16,6 +16,10 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
 - --global: Applies this configuration to all repositories for the current user.
 - user.name: Sets the author name for commits.
 - user.email: Sets the email associated with commits.
+
+
+<img width="678" height="282" alt="1b" src="https://github.com/user-attachments/assets/66fc28b6-1f86-4cd4-92ab-d3c4a6927901" />
+
 1c.
 1d.
 1e.
