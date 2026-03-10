@@ -131,6 +131,10 @@ PRACTICAL 03  |  Stash, Undo & History (Revert, Reset, Amend)
 - bugfix/stash-demo → follows Git naming practice
 - git stash temporarily saves uncommitted changes so you can work on something else without committing incomplete work.
 - git stash pop restores the latest stash
+
+
+<img width="985" height="589" alt="3a" src="https://github.com/user-attachments/assets/6cdd9b69-6605-41b1-9e0a-bceafe5ed8e3" />
+
 3b.
 3c.
 3d.
