@@ -152,3 +152,7 @@ PRACTICAL 03  |  Stash, Undo & History (Revert, Reset, Amend)
 
 3d.
 
+- git reset → moves HEAD pointer
+- --soft → keeps changes staged
+- HEAD~1 → go back one commit
+
