@@ -38,4 +38,9 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
 <img width="847" height="112" alt="1d" src="https://github.com/user-attachments/assets/f6ffab13-e7d1-44dd-bbeb-cedadd723562" />
 
 1e.
+
+- git status: Shows the current state of files in the repository.
+- git add: Moves files to the staging area, preparing them for commit.
+- git commit: Saves the staged files into the repository history.
+- -m: Adds a commit message.
 1f.
