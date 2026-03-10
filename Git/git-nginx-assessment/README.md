@@ -80,6 +80,9 @@ PRACTICAL 02  |  Branching, Committing & Pull Request Workflow
 - We add basic calculator functions
 - This file represents a new feature implementation
 
+<img width="538" height="103" alt="2b" src="https://github.com/user-attachments/assets/5a0e2c78-ee4c-4e07-bc06-642288b14041" />
+
+
 
 2c.
 2d.
