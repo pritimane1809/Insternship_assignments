@@ -293,5 +293,7 @@ PRACTICAL 06  |  SSL/TLS, Load Balancing & Merge Conflict Resolution
 
 6c.
 
+<img width="929" height="697" alt="3e" src="https://github.com/user-attachments/assets/8bdbf72d-ecd2-4ea9-b525-024a7e3c482a" />
+
 
 
