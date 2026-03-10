@@ -100,5 +100,9 @@ This commit documents the new feature.
 
 
 2e.
+
+- git push → uploads commits to remote repository
+- origin → default remote name
+- feature/add-calculator → branch being pushed
 2f.
 2g.
