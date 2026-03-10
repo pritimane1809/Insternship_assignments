@@ -70,6 +70,10 @@ PRACTICAL 02  |  Branching, Committing & Pull Request Workflow
 - -b → creates a new branch
 - feature/add-calculator → branch name following best practice
 - feature/ prefix indicates a new feature
+
+
+  <img width="702" height="129" alt="2a" src="https://github.com/user-attachments/assets/3d7ab51a-e950-4dbd-a34e-6805a577be52" />
+
 2b.
 2c.
 2d.
