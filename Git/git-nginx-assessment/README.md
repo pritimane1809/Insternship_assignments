@@ -46,4 +46,12 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
 
 <img width="799" height="301" alt="1e" src="https://github.com/user-attachments/assets/7d644f5c-fab8-43b1-ae89-fec2b5f14824" />
 
+
+
 1f.
+
+git log displays the commit history including:
+- Commit hash – unique identifier for each commit
+- Author – person who made the commit
+- Date – when the commit was made
+- Commit message – description of the change
