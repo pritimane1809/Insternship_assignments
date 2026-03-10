@@ -158,3 +158,23 @@ PRACTICAL 03  |  Stash, Undo & History (Revert, Reset, Amend)
 
 <img width="973" height="610" alt="3d" src="https://github.com/user-attachments/assets/d9848aff-70ee-45c7-9924-c157074e0aa8" />
 
+
+
+PRACTICAL 04  |  NGINX Install, Config & Hosting Multiple Static Sites
+
+
+4a.
+
+
+- sudo apt update : Updates the Ubuntu package repository list
+- sudo apt install nginx -y: Installs the NGINX web server
+- systemctl status nginx: Shows whether NGINX is running
+- sudo systemctl enable nginx: This ensures NGINX automatically starts when the system boots.
+
+
+<img width="1920" height="1080" alt="4a" src="https://github.com/user-attachments/assets/53e1c24f-17d8-4c0b-b8ba-db42ffe6d071" />
+
+4b.
+4c.
+4d.
+4e.
