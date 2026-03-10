@@ -215,3 +215,62 @@ Tested the app
 
 
 <img width="667" height="231" alt="4f" src="https://github.com/user-attachments/assets/68fc96cb-e9ce-4a15-8520-188a4f4aac72" />
+
+
+
+PRACTICAL 05  |  Reverse Proxy with Docker Backend
+
+5a. 
+
+- docker pull nginx:alpine: Downloads the nginx:alpine image from Docker Hub
+
+  <img width="1920" height="1080" alt="5a" src="https://github.com/user-attachments/assets/1327ed70-dfa8-4353-bcfb-17918119597d" />
+
+5b.
+
+server block Location: /etc/nginx/sites-available/
+
+<img width="877" height="385" alt="5b" src="https://github.com/user-attachments/assets/38cab069-2272-40cc-8e38-12f4a92973b2" />
+
+5c.
+
+- Host Header: Passes the original domain name requested by the client.
+- X-Real-IP: Sends the real client IP address to the backend server.
+- X-Forwarded-For: Stores the chain of client IP addresses.
+- X-Forwarded-Proto: Tells backend which protocol the client used: http, https
+
+5d.
+
+- NGINX loads configs from: /etc/nginx/sites-enabled/ So we create a symbolic link. using command sudo ln -s /etc/nginx/sites-available/myapp.local /etc/nginx/sites-enabled/
+
+<img width="1251" height="227" alt="5d" src="https://github.com/user-attachments/assets/77300364-5328-49c3-94be-e07d6ce7db41" />
+
+5e. 
+
+Test Reverse Proxy
+
+<img width="1002" height="659" alt="5e" src="https://github.com/user-attachments/assets/813a2e22-6ce9-4569-87a8-2add46a21c15" />
+
+5f.
+
+## Reverse Proxy Explanation
+
+This project uses NGINX as a reverse proxy to forward requests
+to a Docker backend container running nginx:alpine.
+
+The following proxy headers are included:
+
+Host
+Passes the original hostname requested by the client to the backend server.
+
+X-Real-IP
+Provides the real client IP address to the backend application.
+
+X-Forwarded-For
+Contains a chain of IP addresses representing the client and proxy servers.
+
+X-Forwarded-Proto
+Indicates whether the original request was made using HTTP or HTTPS.
+
+These headers are important for correct logging, security tracking,
+and application behavior behind proxies.
