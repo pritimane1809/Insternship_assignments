@@ -281,6 +281,12 @@ PRACTICAL 06  |  SSL/TLS, Load Balancing & Merge Conflict Resolution
 
 6a.
 
+- Generated SSL certificate
+- Files created:
+
+/etc/ssl/private/myapp.key
+/etc/ssl/certs/myapp.crt
+
 <img width="1920" height="1080" alt="6a-1" src="https://github.com/user-attachments/assets/d754d18a-3f55-450e-97b7-87115baf8f4f" />
 
 <img width="1014" height="1000" alt="6a-2" src="https://github.com/user-attachments/assets/291bf786-c1a0-4861-a973-79ea868429cb" />
@@ -288,12 +294,143 @@ PRACTICAL 06  |  SSL/TLS, Load Balancing & Merge Conflict Resolution
 
 6b.
 
+- Created load balancer config
+
 <img width="1318" height="816" alt="6b" src="https://github.com/user-attachments/assets/e250540b-7374-49ff-856d-c1f8e57b9255" />
 
 
 6c.
 
+
+
 <img width="929" height="697" alt="3e" src="https://github.com/user-attachments/assets/8bdbf72d-ecd2-4ea9-b525-024a7e3c482a" />
 
 
 
+
+
+
+
+Short Answers:
+
+1.
+- git revert: Creates a new commit that undoes a previous commit while preserving history. Safe for shared repositories.
+- git reset --hard: Moves HEAD and deletes commits and working changes permanently.
+- When to use: Use revert in team/shared repos. Use reset --hard only for local history cleanup.
+
+
+2.
+  - Working Directory – where files are edited.
+  - Staging Area (Index) – files prepared for next commit.
+  - Repository – committed history stored in .git.
+
+- git add → moves file to staging.
+- git commit → saves staged snapshot to repository.
+
+3.
+   - A merge conflict occurs when two branches modify the same line of a file
+- Resolution steps
+
+Open file
+
+Choose correct code
+
+Remove markers
+
+git add file
+
+git commit
+
+4.
+    .gitignore tells Git which files/folders should not be tracked.
+
+Examples:
+
+Python
+
+__pycache__/ → compiled Python files
+
+.env → environment variables
+
+Node.js
+
+node_modules/ → dependency packages
+
+.log files → temporary logs
+
+Reason: avoid large, generated, or sensitive files.
+
+5.
+   - git merge
+
+Combines branches
+
+Creates merge commit
+
+Preserves full history
+
+- git rebase
+
+Reapplies commits onto another base
+
+Creates linear history
+
+- Advantage of rebase
+
+Cleaner commit history.
+
+Avoid rebase
+
+Never rebase public/shared branches.
+
+6.
+   - NGINX uses an asynchronous event-driven model with few worker processes handling thousands of connections.
+   - Apache uses thread-per-connection.
+   - Difference:
+
+NGINX → non-blocking event loop
+
+Apache → thread per request
+
+- Why important:
+
+NGINX handles high concurrency with low memory usage
+
+7.
+   - sites-available → all configuration files
+   - sites-enabled → active sites loaded by NGINX
+   - Allows easy enable/disable of sites without deleting configs.
+
+8.
+   - A reverse proxy sits between clients and backend servers.
+   - Benefits:
+
+load balancing
+
+SSL termination
+
+caching
+
+security
+
+hides backend ports
+
+
+9. SSL termination means decrypting HTTPS traffic at the load balancer
+   -  Advantages:
+
+reduced backend CPU load
+
+centralized certificate management
+
+easier scaling
+
+- Certificate location:
+
+Termination → installed on load balancer
+
+Passthrough → installed on backend servers.
+
+10. Directive checks files in order
+
+    
