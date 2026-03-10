@@ -75,6 +75,12 @@ PRACTICAL 02  |  Branching, Committing & Pull Request Workflow
   <img width="702" height="129" alt="2a" src="https://github.com/user-attachments/assets/3d7ab51a-e950-4dbd-a34e-6805a577be52" />
 
 2b.
+
+- nano calculator.py → creates/opens a file
+- We add basic calculator functions
+- This file represents a new feature implementation
+
+
 2c.
 2d.
 2e.
