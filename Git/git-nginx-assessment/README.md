@@ -30,5 +30,10 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
   <img width="670" height="271" alt="1c" src="https://github.com/user-attachments/assets/5df8f5ec-7cec-4a26-86de-17a765d633da" />
 
 1d.
+
+- echo: Prints text to the terminal.
+- > : Redirects output into a file.
+- README.md: Markdown file used to describe the project.
+- app.py: Python script containing a simple print statement.
 1e.
 1f.
