@@ -89,6 +89,9 @@ PRACTICAL 02  |  Branching, Committing & Pull Request Workflow
 - git commit → records changes in Git history
 - -m → commit message
 
+<img width="969" height="191" alt="2c" src="https://github.com/user-attachments/assets/61890e20-e782-439d-aac3-ed2137fcae2c" />
+
+
 2d.
 2e.
 2f.
