@@ -83,8 +83,12 @@ PRACTICAL 02  |  Branching, Committing & Pull Request Workflow
 <img width="538" height="103" alt="2b" src="https://github.com/user-attachments/assets/5a0e2c78-ee4c-4e07-bc06-642288b14041" />
 
 
-
 2c.
+
+- git add moves the file to the staging area so Git knows what to include in the next commit.
+- git commit → records changes in Git history
+- -m → commit message
+
 2d.
 2e.
 2f.
