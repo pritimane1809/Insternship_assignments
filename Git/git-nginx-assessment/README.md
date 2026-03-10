@@ -34,5 +34,8 @@ PRACTICAL 01  |  Git Installation, Configuration & First Repository
 - echo: Prints text to the terminal
 - README.md: Markdown file used to describe the project.
 - app.py: Python script containing a simple print statement.
+
+<img width="847" height="112" alt="1d" src="https://github.com/user-attachments/assets/f6ffab13-e7d1-44dd-bbeb-cedadd723562" />
+
 1e.
 1f.
