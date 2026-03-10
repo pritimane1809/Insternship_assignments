@@ -94,8 +94,10 @@ PRACTICAL 02  |  Branching, Committing & Pull Request Workflow
 
 2d.
 
-
 This commit documents the new feature.
+
+<img width="864" height="192" alt="2d" src="https://github.com/user-attachments/assets/5cc5b47b-f19b-44a5-b2ed-71240329dd69" />
+
 
 2e.
 2f.
