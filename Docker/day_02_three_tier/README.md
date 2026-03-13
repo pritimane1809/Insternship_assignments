@@ -43,4 +43,14 @@ three-tier-docker-app
 └── nginx
     └── default.conf
 
-    
+
+ Learning Outcomes
+
+- Containerizing applications using Docker
+
+- Managing multi-container applications with Docker Compose
+
+- Creating custom Docker networks
+
+- Using named volumes for persistent storage
+
