@@ -47,3 +47,5 @@ docker run -d -p 80:80 day_02
 ![alt text](01.png)
 
 ![alt text](02.png)
+
+<img width="1441" height="619" alt="Screenshot (695)" src="https://github.com/user-attachments/assets/96b87219-6f6e-4a41-8eb6-89c11f1b4c26" />

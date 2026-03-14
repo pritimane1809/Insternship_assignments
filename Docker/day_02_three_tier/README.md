@@ -54,3 +54,17 @@ three-tier-docker-app
 
 - Using named volumes for persistent storage
 
+ Screenshots: 
+
+ <img width="1306" height="999" alt="T3-1" src="https://github.com/user-attachments/assets/8ce3cc70-9a8f-4ef8-956c-808e71345d7a" />
+
+ <img width="1920" height="992" alt="T3-2" src="https://github.com/user-attachments/assets/2f9b1c37-454f-4563-a0aa-490144910092" />
+
+ <img width="951" height="213" alt="T3-3" src="https://github.com/user-attachments/assets/f2e4f6f5-a2f7-41dc-8202-e143e47ae8f6" />
+
+ <img width="1458" height="368" alt="T3-4" src="https://github.com/user-attachments/assets/e4fc3a56-9d3d-4558-b821-3bf72c64efe2" />
+
+
+
+
+ 
