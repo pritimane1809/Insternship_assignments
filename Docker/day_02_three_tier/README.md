@@ -56,6 +56,7 @@ three-tier-docker-app
 
  Screenshots: 
 
+
  <img width="1306" height="999" alt="T3-1" src="https://github.com/user-attachments/assets/8ce3cc70-9a8f-4ef8-956c-808e71345d7a" />
 
  <img width="1920" height="992" alt="T3-2" src="https://github.com/user-attachments/assets/2f9b1c37-454f-4563-a0aa-490144910092" />
@@ -66,5 +67,16 @@ three-tier-docker-app
 
 
 
+
+ 
+
+
+ ![alt text](T3-1.png)
+
+ ![alt text](T3-2.png)
+
+ ![alt text](T3-3.png)
+
+ ![alt text](T3-4.png)
 
  
