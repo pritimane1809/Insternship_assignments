@@ -1,4 +1,4 @@
- Docker Compose Multi-Service Application
+# Docker Compose Multi-Service Application
  
 
  This task demonstrates a multi-container application using Docker Compose. It includes:
@@ -11,7 +11,8 @@
 
  The application counts how many times a page has been visited and displays it in the browser.
 
-  Architecture
+  # Architecture
+  
  User → Nginx → Flask App → Redis
 
  - Nginx handles incoming requests
@@ -20,21 +21,31 @@
 
  - Redis stores and increments the visit counter
 
+
  Day-05/
  │
+ 
  ├── app/
- │   ├── app.py
- │   ├── requirements.txt
- │   └── Dockerfile
+ 
+ │    ├── app.py
+ 
+ │    ├── requirements.txt
+ 
+ │    └── Dockerfile
+ 
  │
  ├── nginx/
+ 
  │   └── default.conf
+ 
  │
  ├── docker-compose.yml
+ 
  └── README.md
 
 
- Technologies Used
+
+ # Technologies Used
 
  - Docker & Docker Compose
 
