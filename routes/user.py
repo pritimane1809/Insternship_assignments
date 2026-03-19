@@ -1,5 +1,11 @@
 from flask import Blueprint, g, escape, session, redirect, render_template, request, jsonify, Response, flash
 from app import DAO
+from db import DAO
+#def get_dao():
+ #   from app import DAO
+  #  return DAO
+# DAO = get_dao()
+
 from Misc.functions import *
 
 from Controllers.UserManager import UserManager

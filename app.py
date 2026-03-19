@@ -1,5 +1,6 @@
 from flask import Flask, g, escape, session, redirect, render_template, request, jsonify, Response
 from Misc.functions import *
+from db import DAO
 
 app = Flask(__name__)
 app.secret_key = '#$ab9&^BB00_.'
@@ -23,3 +24,4 @@ app.jinja_env.globals.update(
 app.register_blueprint(user_view)
 app.register_blueprint(book_view)
 app.register_blueprint(admin_view)
+app.run(host="0.0.0.0", port=5000, debug=True)
