@@ -26,12 +26,11 @@ Configure a workflow that:
 
 
 
-<img width="1920" height="911" alt="1 1" src="https://github.com/user-attachments/assets/2a494326-eb7b-40a7-9839-59534fc8440a" />
+<img width="1920" height="746" alt="1 1" src="https://github.com/user-attachments/assets/64928a5e-b47c-4b29-b94b-8359d1a59361" />
 
 
 
-<img width="1885" height="826" alt="1 2" src="https://github.com/user-attachments/assets/c0f3d37c-37c1-437e-af1d-37365cd82a3d" />
-
+<img width="1885" height="680" alt="1 2" src="https://github.com/user-attachments/assets/f6eaa43a-d3be-4561-af0e-4cfa8b82a7a8" />
 
 
 
@@ -59,12 +58,11 @@ Ensure:
 
 
 
-<img width="1920" height="981" alt="2 1" src="https://github.com/user-attachments/assets/00f2fbf4-febb-4483-a549-b0fa8e8dc759" />
+<img width="1920" height="886" alt="2 1" src="https://github.com/user-attachments/assets/6ea448a0-253f-4268-aec0-b2d7dcf8dda3" />
 
 
 
-<img width="1891" height="817" alt="2 2" src="https://github.com/user-attachments/assets/2c0807e8-6aa4-4da5-8a9e-bac7323979a6" />
-
+<img width="1891" height="709" alt="2 2" src="https://github.com/user-attachments/assets/87923c0c-353c-4ce1-8169-8a76ed75bf09" />
 
 
 ---
@@ -90,6 +88,13 @@ Used GitHub context variables:
 
 <img width="507" height="342" alt="03" src="https://github.com/user-attachments/assets/faafbbb8-a84d-499d-add5-cfaa891f7798" />
 
+
+
+<img width="1914" height="669" alt="3 1" src="https://github.com/user-attachments/assets/5908efc2-01ab-47de-a5b9-96b086fc4899" />
+
+
+
+<img width="1920" height="833" alt="3 2" src="https://github.com/user-attachments/assets/65fb5782-22d0-4549-b7f9-f9dee2034350" />
 
 ---
 
