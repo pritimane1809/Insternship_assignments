@@ -124,4 +124,4 @@ Used GitHub context variables:
 * Job dependencies using `needs`
 * Context variables usage
 * PR-based CI pipelines
-* Docker automation in CI/CD
+* Docker automation in CI/CD.
