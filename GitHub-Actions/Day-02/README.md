@@ -116,6 +116,14 @@ Used GitHub context variables:
 <img width="686" height="438" alt="04" src="https://github.com/user-attachments/assets/e4321a2c-639e-4c7e-bb2a-27ad76b3b65e" />
 
 
+
+<img width="1685" height="851" alt="4 1" src="https://github.com/user-attachments/assets/7a13c82a-0578-4ff1-8600-83dbe9181316" />
+
+
+
+<img width="1896" height="630" alt="4 2" src="https://github.com/user-attachments/assets/72f7431a-771b-4ca4-8d1b-7972e82da743" />
+
+
 ---
 
 # 📌 Task 5: Docker Build & Push
