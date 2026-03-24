@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  REPOSITORY: your-dockerhub-username/my-app
+  REPOSITORY: paulphillip01/my-app
   IMAGE_TAG: latest
 
 jobs:
