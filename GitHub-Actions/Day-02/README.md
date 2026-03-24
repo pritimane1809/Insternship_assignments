@@ -25,6 +25,16 @@ Configure a workflow that:
 <img width="453" height="194" alt="01" src="https://github.com/user-attachments/assets/fc5f111d-388a-4e5b-ad09-c9caa7f8bad2" />
 
 
+
+<img width="1920" height="911" alt="1 1" src="https://github.com/user-attachments/assets/2a494326-eb7b-40a7-9839-59534fc8440a" />
+
+
+
+<img width="1885" height="826" alt="1 2" src="https://github.com/user-attachments/assets/c0f3d37c-37c1-437e-af1d-37365cd82a3d" />
+
+
+
+
 ---
 
 #  Task 2: Job Dependency Design
