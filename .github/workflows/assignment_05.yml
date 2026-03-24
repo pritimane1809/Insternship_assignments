@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  REPOSITORY: paulphillip01/Internship_assignments
+  REPOSITORY: paulphillip01/library-app
   IMAGE_TAG: latest
 
 jobs:
