@@ -58,6 +58,15 @@ Ensure:
 <img width="590" height="368" alt="02" src="https://github.com/user-attachments/assets/0fab132b-402c-4af9-a468-a0a52e082a0c" />
 
 
+
+<img width="1920" height="981" alt="2 1" src="https://github.com/user-attachments/assets/00f2fbf4-febb-4483-a549-b0fa8e8dc759" />
+
+
+
+<img width="1891" height="817" alt="2 2" src="https://github.com/user-attachments/assets/2c0807e8-6aa4-4da5-8a9e-bac7323979a6" />
+
+
+
 ---
 
 #  Task 3: Using GitHub Context Variables
