@@ -1,3 +1,5 @@
+name: job dependency
+
 jobs:
   build:
     runs-on: ubuntu-latest
