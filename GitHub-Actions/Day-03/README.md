@@ -133,15 +133,3 @@ Verify that changes in shared workflow reflect automatically in all consuming re
 * ⚙️ `workflow_call` enables cross-repository workflow usage
 * 🚀 Centralized CI improves consistency
 * 🔧 Changes in one place reflect everywhere
-
-
-
-
-
-
----
-
-✨ *End of Project*
-
-Lint check
-Test execution
