@@ -1,8 +1,23 @@
-- name: Build Docker Image
-  run: |
-    IMAGE_NAME=my-app
-    IMAGE_TAG=${{ github.sha }}
-    
-    docker build -t $IMAGE_NAME:$IMAGE_TAG .
-    
-    echo "Image built with tag: $IMAGE_TAG"
+name: build docker image and tag
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: |
+          IMAGE_NAME=my-app
+          IMAGE_TAG=${{ github.sha }}
+
+          docker build -t $IMAGE_NAME:$IMAGE_TAG .
+
+          echo "Image built with tag: $IMAGE_TAG"
