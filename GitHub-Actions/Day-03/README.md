@@ -80,8 +80,17 @@ on:
 
 jobs:
   run-shared-ci:
-    uses: pritimane1809/Internship_assignment/.github/workflows/shared-ci.yml@main
+    uses: pritimane1809/Internship_assignments/.github/workflows/shared-ci.yml@main
 ```
+
+
+<img width="1354" height="616" alt="d3-2" src="https://github.com/user-attachments/assets/34c9f90d-ca5d-4b4e-8bd1-40db1634c42f" />
+
+
+
+<img width="1855" height="828" alt="d3-3" src="https://github.com/user-attachments/assets/186c32c4-47fe-4490-a555-78138ef611f9" />
+
+
 
 ## 📌 Key Concept
 
