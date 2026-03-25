@@ -11,8 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Basic CI check
-        run: echo "Running Shared CI Quality Check"
+      - name: Run Updated CI check
+        run: echo "Shared workflow updated!"
 
       # These steps are only for Node.js projects
       - name: Setup Node.js
