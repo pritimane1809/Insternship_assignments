@@ -28,6 +28,11 @@ Create a centralized workflow that can be reused by multiple repositories.
   .github/workflows/shared-ci.yml
   ```
 
+
+<img width="519" height="553" alt="d3-1" src="https://github.com/user-attachments/assets/832bc05d-620c-4d07-8030-dee6b7940899" />
+
+
+
 * Workflow includes:
 
   * Code checkout
