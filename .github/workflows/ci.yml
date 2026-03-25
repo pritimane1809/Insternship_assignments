@@ -1,0 +1,8 @@
+- name: Build Docker Image
+  run: |
+    IMAGE_NAME=my-app
+    IMAGE_TAG=${{ github.sha }}
+    
+    docker build -t $IMAGE_NAME:$IMAGE_TAG .
+    
+    echo "Image built with tag: $IMAGE_TAG"
