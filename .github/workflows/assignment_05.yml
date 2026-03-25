@@ -23,8 +23,9 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -f Internship_assignments/Docker/day_02/Dockerfile 
-            -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker build \
+          -t $REGISTRY/$REPOSITORY:$IMAGE_TAG \
+           Insternship_assignments
 
       - name: Push Docker Image
         run: docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
