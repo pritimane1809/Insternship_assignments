@@ -1,0 +1,21 @@
+name: PR Validation + Security Scan
+
+on:
+  pull_request:
+
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run PR Checks
+        run: echo "Running PR checks"
+
+      - name: Run Trivy Security Scan
+        uses: aquasecurity/trivy-action@0.20.0
+        with:
+          scan-type: fs
+          severity: HIGH,CRITICAL
