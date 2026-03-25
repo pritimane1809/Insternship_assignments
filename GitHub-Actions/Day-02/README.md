@@ -148,6 +148,14 @@ Used GitHub context variables:
 <img width="1087" height="665" alt="05" src="https://github.com/user-attachments/assets/6cea7eae-60be-4338-acd4-9a1b7d33fa84" />
 
 
+
+<img width="1879" height="876" alt="5 1" src="https://github.com/user-attachments/assets/c10e660a-8a67-4c32-80de-823f2235de12" />
+
+
+
+<img width="1896" height="639" alt="5 2" src="https://github.com/user-attachments/assets/6c22654e-db35-43a5-b51b-bf2fe105f66b" />
+
+
 ---
 
 # 🚀 Key Learnings
