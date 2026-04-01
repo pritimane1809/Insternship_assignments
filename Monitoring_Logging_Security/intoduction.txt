@@ -166,6 +166,155 @@ Monitoring and Logging together provide full visibility into system health. Whil
 
 ---
 
+# 🐧 Linux Commands for Monitoring & Logging
+
+## 📌 Introduction
+
+Linux provides powerful built-in commands to monitor system performance and analyze logs. These commands are widely used by DevOps engineers for troubleshooting and system health checks.
+
+---
+
+## 📊 System Monitoring Commands
+
+### 🔹 Check System Uptime
+
+```bash
+uptime
+```
+
+* Shows how long the system has been running and load average
+
+---
+
+### 🔹 View CPU & Memory Usage
+
+```bash
+top
+```
+
+* Real-time system monitoring (CPU, memory, processes)
+
+```bash
+htop
+```
+
+* Improved interactive version of top (if installed)
+
+---
+
+### 🔹 Check Memory Usage
+
+```bash
+free -h
+```
+
+* Displays RAM usage in human-readable format
+
+---
+
+### 🔹 Check Disk Usage
+
+```bash
+df -h
+```
+
+* Shows disk space usage
+
+```bash
+du -sh *
+```
+
+* Shows folder-wise disk usage
+
+---
+
+### 🔹 Check Running Processes
+
+```bash
+ps aux
+```
+
+* Lists all running processes
+
+```bash
+ps aux | grep <process_name>
+```
+
+* Find a specific process
+
+---
+
+### 🔹 Monitor System Activity
+
+```bash
+vmstat
+```
+
+* Shows memory, CPU, and I/O stats
+
+```bash
+iostat
+```
+
+* Displays CPU and disk I/O stats
+
+```bash
+sar
+```
+
+* Historical system performance data
+
+---
+
+## 🌐 Network Monitoring Commands
+
+### 🔹 Check Network Connections
+
+```bash
+netstat -tulnp
+```
+
+* Shows listening ports and services
+
+```bash
+ss -tulnp
+```
+
+* Faster alternative to netstat
+
+---
+
+### 🔹 Test Connectivity
+
+```bash
+ping google.com
+```
+
+```bash
+curl -I http://example.com
+```
+
+---
+
+## 📝 Logging Commands
+
+### 🔹 View System Logs
+
+```bash
+cat /var/log/syslog
+```
+
+```bash
+less /var/log/syslog
+```
+
+```bash
+tail -f /var/log/syslog
+```
+
+---
+
+
 # 🔍 ELK Stack (Elasticsearch, Logstash, Kibana) 
 
 ## 📌 Introduction
