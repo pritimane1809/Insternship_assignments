@@ -1,0 +1,442 @@
+# 📊 Monitoring & Logging - Day 1 
+
+## 📌 Introduction
+
+Monitoring and Logging are essential parts of modern DevOps practices. They help ensure systems run smoothly, detect issues early, and improve overall system performance.
+
+---
+
+## 🔍 What is Monitoring?
+
+Monitoring is the continuous process of collecting and analyzing system data to ensure everything is functioning correctly in real time.
+
+
+### 📂 Types of Monitoring:
+
+1. Application Monitoring
+2. Network Monitoring
+3. Infrastructure Monitoring
+
+---
+
+⚙️ How Monitoring Works (Flow)
+Application → Metrics Collection → Storage → Dashboard → Alerts
+
+--- 
+
+🏗️ Architecture
+
+  [Application/Server]
+        ↓
+   [Metrics Collector] (Prometheus / CloudWatch)
+        ↓
+   [Storage]
+        ↓
+   [Visualization] (Grafana)
+        ↓
+   [Alerting] (PagerDuty / Alertmanager)
+
+---
+
+## 📝 What is Logging?
+
+Logging involves recording system events with timestamps to track what happens inside a system.
+
+
+### 📌 Key Insight:
+
+* **Monitoring** tells *something is wrong*
+* **Logging** tells *why it is wrong*
+
+### 📂 Types of Logs:
+
+* Error Logs
+* Application Logs
+* Access Logs
+
+---
+
+## 🎯 Why Monitoring & Logging?
+
+* Detect issues early
+* Improve system performance
+* Maintain SLAs (Service Level Agreements)
+* Reduce operational costs
+* Debug issues faster
+
+---
+
+## 👁️ Observability
+
+Observability is the ability to understand the internal state of a system using data.
+
+### 🔑 Three Pillars of Observability:
+
+1. **Metrics**
+
+   * Quantitative data (CPU, Memory, Latency)
+
+2. **Logs**
+
+   * Historical records (errors, events)
+
+3. **Traces**
+
+   * Track request flow across systems
+
+---
+
+## 🔄 Monitoring vs Logging vs Alerting
+
+| Feature   | Monitoring          | Logging      | Alerting           |
+| --------- | ------------------- | ------------ | ------------------ |
+| Purpose   | Track system health | Store events | Notify issues      |
+| Data Type | Metrics             | Text logs    | Alerts             |
+| Usage     | Dashboards          | Debugging    | Email/Slack alerts |
+
+---
+
+## 🛠️ Tools Overview
+
+### 📊 Metrics Tools:
+
+* Prometheus
+* Datadog
+
+### 📜 Logging Tools:
+
+* ELK Stack (Elasticsearch, Logstash, Kibana)
+* Loki
+* Splunk
+
+### 🔗 Tracing Tools:
+
+* Jaeger
+* Zipkin
+
+### 📈 Visualization:
+
+* Grafana
+
+### 🚨 Alerting:
+
+* PagerDuty
+
+---
+
+## 🏗️ Architecture Flow
+
+```
+Application → Agent → Collector → Storage → Dashboard → Alert System
+```
+
+### 📌 Explanation:
+
+* **Application** generates data
+* **Agent** collects data
+* **Collector** processes it
+* **Storage** stores it
+* **Dashboard** visualizes it
+* **Alert System** notifies issues
+
+---
+
+## ✅ Best Practices
+
+* Define clear monitoring goals
+* Use structured logging (JSON format)
+* Set up proper alerts
+* Add tags and metadata for better tracking
+
+### 🧾 Example Log Format:
+
+```json
+{
+  "level": "error",
+  "message": "DB connection failed",
+  "service": "UserService"
+}
+```
+
+---
+
+## 📌 Conclusion
+
+Monitoring and Logging together provide full visibility into system health. While monitoring helps detect issues, logging helps diagnose them. Combined with observability practices, they form the backbone of reliable and scalable systems in DevOps.
+
+---
+
+# 🐧 Linux Commands for Monitoring & Logging
+
+## 📌 Introduction
+
+Linux provides powerful built-in commands to monitor system performance and analyze logs. These commands are widely used by DevOps engineers for troubleshooting and system health checks.
+
+---
+
+## 📊 System Monitoring Commands
+
+### 🔹 Check System Uptime
+
+```bash
+uptime
+```
+
+* Shows how long the system has been running and load average
+
+---
+
+### 🔹 View CPU & Memory Usage
+
+```bash
+top
+```
+
+* Real-time system monitoring (CPU, memory, processes)
+
+```bash
+htop
+```
+
+* Improved interactive version of top (if installed)
+
+---
+
+### 🔹 Check Memory Usage
+
+```bash
+free -h
+```
+
+* Displays RAM usage in human-readable format
+
+---
+
+### 🔹 Check Disk Usage
+
+```bash
+df -h
+```
+
+* Shows disk space usage
+
+```bash
+du -sh *
+```
+
+* Shows folder-wise disk usage
+
+---
+
+### 🔹 Check Running Processes
+
+```bash
+ps aux
+```
+
+* Lists all running processes
+
+```bash
+ps aux | grep <process_name>
+```
+
+* Find a specific process
+
+---
+
+### 🔹 Monitor System Activity
+
+```bash
+vmstat
+```
+
+* Shows memory, CPU, and I/O stats
+
+```bash
+iostat
+```
+
+* Displays CPU and disk I/O stats
+
+```bash
+sar
+```
+
+* Historical system performance data
+
+---
+
+## 🌐 Network Monitoring Commands
+
+### 🔹 Check Network Connections
+
+```bash
+netstat -tulnp
+```
+
+* Shows listening ports and services
+
+```bash
+ss -tulnp
+```
+
+* Faster alternative to netstat
+
+---
+
+### 🔹 Test Connectivity
+
+```bash
+ping google.com
+```
+
+```bash
+curl -I http://example.com
+```
+
+---
+
+## 📝 Logging Commands
+
+### 🔹 View System Logs
+
+```bash
+cat /var/log/syslog
+```
+
+```bash
+less /var/log/syslog
+```
+
+```bash
+tail -f /var/log/syslog
+```
+
+---
+
+
+# 🔍 ELK Stack (Elasticsearch, Logstash, Kibana) 
+
+## 📌 Introduction
+
+The **ELK Stack** is a popular open-source logging and analytics platform used in DevOps to collect, process, store, and visualize logs from different systems in real time.
+
+ELK stands for:
+
+* **Elasticsearch** – Search & storage engine
+* **Logstash** – Data processing pipeline
+* **Kibana** – Visualization dashboard
+
+---
+
+## 🧱 ELK Stack Components
+
+### 1. 🔎 Elasticsearch
+
+* Distributed search and analytics engine
+* Stores logs in structured JSON format
+* Provides fast search and indexing
+
+---
+
+### 2. 🔄 Logstash
+
+* Data collection and processing pipeline
+* Collects logs from multiple sources
+* Transforms and filters logs before sending to Elasticsearch
+
+---
+
+### 3. 📊 Kibana
+
+* Visualization and dashboard tool
+* Connects with Elasticsearch
+* Helps create charts, graphs, and dashboards
+
+---
+
+## ⚙️ ELK Architecture
+
+```id="elk-arch"
+Data Source → Logstash → Elasticsearch → Kibana
+```
+
+### 📌 Flow Explanation:
+
+1. **Data Source** (applications, servers, containers) generates logs
+2. **Logstash** collects and processes logs
+3. **Elasticsearch** stores and indexes logs
+4. **Kibana** visualizes logs through dashboards
+
+---
+
+## 📂 Logstash Pipeline
+
+```id="pipeline"
+Input → Filter → Output
+```
+
+### 🔹 Input:
+
+* File, Syslog, Beats, Kafka
+
+### 🔹 Filter:
+
+* Grok (parsing logs)
+* Date formatting
+* Remove unwanted fields
+
+### 🔹 Output:
+
+* Elasticsearch
+* File
+* Other systems
+
+---
+
+## 📊 Data Flow Example
+
+```id="flow"
+Application Logs → Filebeat → Logstash → Elasticsearch → Kibana Dashboard
+```
+
+---
+
+
+## 📝 Sample Log (JSON Format)
+
+```json id="log-example"
+{
+  "timestamp": "2026-03-31T10:00:00Z",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Transaction failed",
+  "user_id": "12345"
+}
+```
+---
+
+## 🚨 Alerting in ELK
+
+* Alerts based on conditions (e.g., high error rate)
+* Integration with email, Slack, PagerDuty
+* Helps in proactive monitoring
+
+---
+
+## 🏗️ Deployment Options
+
+* Local setup (for learning)
+* Cloud deployment (AWS, Azure, GCP)
+* Docker-based setup
+* Kubernetes (ECK - Elastic Cloud on Kubernetes)
+
+---
+
+## 📌 Conclusion
+
+The ELK Stack is a powerful solution for centralized logging and monitoring. It helps DevOps teams gain insights into system behavior, detect issues quickly, and improve system reliability through real-time data analysis.
+
+---
+
+
