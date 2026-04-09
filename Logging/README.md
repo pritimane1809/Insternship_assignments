@@ -302,5 +302,15 @@ Example name:
 ```id="r31nd9"
 ELK Monitoring Dashboard
 ```
+---
+
+<img width="1856" height="738" alt="Screenshot (883)" src="https://github.com/user-attachments/assets/dba394a7-3e2c-46bb-9041-eeb84e7b5648" />
+
+---
+
+<img width="1713" height="688" alt="Screenshot (884)" src="https://github.com/user-attachments/assets/ebefdf01-1db6-4807-a5b5-a14c2de850c7" />
+
+---
+
 
 
