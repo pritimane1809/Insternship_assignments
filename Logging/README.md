@@ -217,3 +217,90 @@ After completing this project, you will have:
 This project provides hands-on experience in setting up a production-like logging system using ELK stack, which is a key skill for DevOps Engineers.
 
 ---
+
+# 📊 Kibana Dashboard Setup for ELK Stack
+
+
+# 📈 Create Visualization
+
+## Steps:
+
+1. Open **Visualize Library**
+2. Click **Create Visualization**
+3. Select **Lens**
+
+---
+
+## Example Visualization: Log Count Over Time
+
+### Configure:
+
+* Drag `@timestamp` → X-axis
+* Drag `Records` → Y-axis
+
+This creates a time-based chart.
+
+---
+
+## Additional Visualizations
+
+You can also create:
+
+* Pie charts
+* Data tables
+* Bar charts
+* Metric cards
+
+---
+
+# 💾 Save Visualization
+
+Click **Save**
+
+Example name:
+
+```id="h0rzw8"
+Log Count Visualization
+```
+
+---
+
+# 📊 Create Dashboard
+
+## Steps:
+
+1. Open **Dashboard**
+2. Click **Create Dashboard**
+
+---
+
+# ➕ Step 8: Add Visualizations to Dashboard
+
+1. Click **Add from Library**
+2. Select saved visualizations
+3. Add them to dashboard layout
+
+---
+
+# 🎨 Step 9: Customize Dashboard
+
+You can:
+
+* Resize panels
+* Rearrange charts
+* Apply time filters
+* Add titles
+
+---
+
+# 💾 Step 10: Save Dashboard
+
+Click **Save**
+
+Example name:
+
+```id="r31nd9"
+ELK Monitoring Dashboard
+```
+
+
