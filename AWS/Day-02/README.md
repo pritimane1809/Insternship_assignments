@@ -270,5 +270,173 @@ The bucket should no longer appear.
 <img width="1404" height="641" alt="2 2" src="https://github.com/user-attachments/assets/c291314e-f3f4-4a95-b807-65cf655f91fa" />
 
 ---
+# 🔐 Task 3:  IAM Role Trust Relationship & S3 Bucket Creation
+
+## 📌 Overview
+
+This task demonstrates how to:
+
+* Create two IAM roles
+* Configure a trust relationship between roles
+* Ensure one role has **no direct S3 permissions**
+* Allow role assumption using AWS STS
+* Create an S3 bucket using the assumed role
+
+---
+
+## 🛠️ Prerequisites
+
+* AWS Account
+* AWS CLI installed
+* Basic understanding of IAM Roles and policies
+
+---
+
+## 👤 Step 1: Create IAM-ROLE-1 (No S3 Access)
+
+1. Login to AWS Console
+2. Navigate to IAM → Roles → Create role
+3. Select:
+
+   * Trusted entity: AWS Service → EC2
+4. Click **Next**
+5. Do NOT attach any S3 policies
+6. Name the role: `IAM-ROLE-1`
+7. Click **Create role`
+
+📌 This role has **no permissions to access S3**
+
+---
+
+## 👤 Step 2: Create IAM-ROLE-2 (S3 Access Role)
+
+1. Go to IAM → Roles → Create role
+2. Select:
+
+   * Trusted entity: Another AWS account
+   * Enter your AWS Account ID
+3. Click **Next**
+
+---
+
+## 🔒 Step 3: Create S3 Permission Policy
+
+1. Go to IAM → Policies → Create Policy
+2. Select JSON and paste:
+
+```json id="q2j9fz"
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:ListBucket"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+3. Name the policy: `S3CreatePolicyRole2`
+4. Attach this policy to `IAM-ROLE-2`
+
+---
+
+## 🔗 Step 4: Configure Trust Relationship
+
+1. Open `IAM-ROLE-2`
+2. Go to **Trust relationships → Edit trust policy**
+3. Update the policy:
+
+```json id="nb34dn"
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::ACCOUNT_ID:role/IAM-ROLE-1"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+🔁 Replace `ACCOUNT_ID` with your AWS account ID.
+
+---
+
+## 💻 Step 5: Launch EC2 with IAM-ROLE-1
+
+1. Go to EC2 → Launch Instance
+2. Attach IAM Role: `IAM-ROLE-1`
+3. Launch and connect to the instance
+
+---
+
+## 🔑 Step 6: Assume IAM-ROLE-2
+
+Run:
+
+```bash id="bcaxxt"
+aws sts assume-role \
+  --role-arn arn:aws:iam::ACCOUNT_ID:role/IAM-ROLE-2 \
+  --role-session-name testsession
+```
+
+You will receive temporary credentials:
+
+* AccessKeyId
+* SecretAccessKey
+* SessionToken
+
+Export them:
+
+```bash id="qyk7p3"
+export AWS_ACCESS_KEY_ID=your_access_key
+export AWS_SECRET_ACCESS_KEY=your_secret_key
+export AWS_SESSION_TOKEN=your_session_token
+```
+
+---
+
+## 🪣 Step 7: Create S3 Bucket
+
+```bash id="h7b1r6"
+aws s3 mb s3://trust-demo-bucket-12345 --region ap-south-1
+```
+
+⚠️ Bucket name must be globally unique.
+
+---
+
+## ✅ Step 8: Verification
+
+```bash id="n4gjtp"
+aws s3 ls
+```
+
+✔ Bucket is created successfully
+✔ IAM-ROLE-1 alone cannot access S3
+✔ Access is granted only via IAM-ROLE-2
+
+---
+
+## 🎯 Outcome
+
+* Created IAM roles with clear separation of permissions
+* Implemented trust relationship between roles
+* Used AWS STS to assume role securely
+* Created S3 bucket using assumed role credentials
+
+---
+<img width="588" height="63" alt="Screenshot (897)" src="https://github.com/user-attachments/assets/23350ab3-4b48-451e-a294-725efa07f2ce" />
+
+---
+
 
 
