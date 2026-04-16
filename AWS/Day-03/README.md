@@ -395,6 +395,9 @@ http://your-ec2-public-ip
 * Web server accessible via port 80
 
 ---
+<img width="1203" height="395" alt="3 1" src="https://github.com/user-attachments/assets/80145e3b-3fbd-4f4a-9523-c5a2ab58789b" />
+
+---
 
 # 🧩 Task 2: EC2 with Docker, Apache & Nginx Containers
 
@@ -475,49 +478,25 @@ http://your-ec2-public-ip:8080
 
 ---
 
-## 📌 Key Concept: User Data
-
-* User Data is a **startup script** executed automatically during EC2 launch
-* Used for automation and configuration management
+<img width="1729" height="535" alt="3 3" src="https://github.com/user-attachments/assets/0bc4c703-90e1-444e-b795-4a450375a7f7" />
 
 ---
 
-## ⚠️ Troubleshooting
-
-* Check running containers:
-
-```bash id="t0dj2y"
-docker ps
-```
-
-* Check user data logs:
-
-```bash id="mvig1m"
-cat /var/log/cloud-init-output.log
-```
-
-* Ensure ports are open in security group
+<img width="1230" height="469" alt="3 2" src="https://github.com/user-attachments/assets/cfe58b7a-3e5d-47e0-91cd-7a8973d3dc54" />
 
 ---
 
-## 📌 Best Practices
-
-* Use user data for automation
-* Keep scripts idempotent
-* Restrict security group access in production
-* Monitor instance and container health
+<img width="891" height="183" alt="3 4" src="https://github.com/user-attachments/assets/efc80e8c-6636-40d3-91e4-e8a97b94f02f" />
 
 ---
 
-## 🧾 Resume One-Liners
 
-**Task 1:**
-Provisioned EC2 instance and automated Nginx deployment using user data scripts.
 
-**Task 2:**
-Automated Docker installation and deployed Apache and Nginx containers on EC2 using user data.
 
----
+
+
+
+
 
 
 
