@@ -490,6 +490,166 @@ http://your-ec2-public-ip:8080
 
 ---
 
+# 🔐 Task 4 : Secure Access to Private EC2 Instance using Bastion Host (Jump Server)
+
+## 📌 Overview
+
+This task demonstrates how to:
+
+* Launch an EC2 instance in a **private subnet**
+* Restrict direct internet access
+* Configure a **Bastion Host (Jump Server)** in a public subnet
+* Securely access the private EC2 instance via SSH
+* Understand network flow using a simple architecture diagram
+
+---
+
+## 🛠️ Prerequisites
+
+* AWS Account
+* Basic knowledge of VPC, Subnets, and EC2
+* SSH client (Terminal / Git Bash)
+
+---
+
+# 🏗️ Step 1: Create VPC
+
+1. Go to VPC → Create VPC
+2. Configure:
+
+   * **CIDR Block**: `10.0.0.0/16`
+3. Create VPC
+
+---
+
+# 🌐 Step 2: Create Subnets
+
+## Public Subnet
+
+* CIDR: `10.0.100.0/24`
+* Enable auto-assign public IP
+
+## Private Subnet
+
+* CIDR: `10.0.200.0/24`
+* Disable public IP
+
+---
+
+# 🌍 Step 3: Create Internet Gateway
+
+1. Go to Internet Gateways → Create
+2. Attach to your VPC
+
+---
+
+# 🛣️ Step 4: Configure Route Tables
+
+## Public Route Table
+
+* Add route:
+
+```
+0.0.0.0/0 → Internet Gateway
+```
+
+* Associate with **Public Subnet**
+
+## Private Route Table
+
+* No internet route (remains isolated)
+
+---
+
+# 🖥️ Step 5: Launch Bastion Host (Public EC2)
+
+1. Go to EC2 → Launch Instance
+2. Configure:
+
+   * **Name**: `Bastion-Host`
+   * **Subnet**: Public Subnet
+   * **Public IP**: Enabled
+   * **Key Pair**: Create/download
+
+## Security Group:
+
+* Allow SSH (Port 22) from **your IP only**
+
+---
+
+# 🔒 Step 6: Launch Private EC2 Instance
+
+1. Launch another EC2 instance
+2. Configure:
+
+   * **Name**: `Private-EC2`
+   * **Subnet**: Private Subnet
+   * **Public IP**: Disabled
+   * Same key pair
+
+## Security Group:
+
+* Allow SSH (Port 22) **only from Bastion Host**
+
+  * Source: Bastion Security Group
+
+---
+
+# 🔑 Step 7: Connect to Bastion Host
+
+```bash
+chmod 400 key.pem
+```
+
+```bash
+ssh -i key.pem ubuntu@bastion-public-ip
+```
+
+---
+
+# 🔁 Step 8: Connect to Private EC2 via Bastion
+
+### Upload key to Bastion:
+
+```bash
+scp -i key.pem key.pem ubuntu@bastion-public-ip:~
+```
+
+### SSH into Private EC2:
+
+```bash
+ssh -i key.pem ubuntu@private-ec2-private-ip
+```
+
+---
+
+# 🧩 Network Flow Diagram
+
+```
+          🌍 Internet
+               |
+        ┌───────────────┐
+        │ Bastion Host  │  (Public Subnet + Public IP)
+        └───────────────┘
+               |
+               | SSH (Private Network)
+               |
+        ┌───────────────┐
+        │ Private EC2   │  (Private Subnet, No Public IP)
+        └───────────────┘
+```
+
+---
+
+# 🔍 Flow Explanation
+
+1. User connects to Bastion Host via public IP
+2. Bastion Host connects to Private EC2 via private IP
+3. Private EC2 remains inaccessible directly from the internet
+
+---
+
+
 
 
 
