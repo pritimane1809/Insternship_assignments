@@ -124,5 +124,404 @@ ssh -i my-keypair.pem ubuntu@your-public-ip
 
 ---
 
+# 🚀 Task 2 : EC2, S3 & Instance Profile Setup in AWS
+
+## 📌 Project Overview
+
+This project demonstrates how to:
+
+* Launch an EC2 instance with public access
+* Connect to EC2 using SSH key pair
+* Create an S3 bucket using AWS Console
+* Attach an IAM Role (Instance Profile) to EC2
+* Use AWS CLI from EC2 to upload files to S3
+* Verify successful file upload
+
+---
+
+## 🛠️ Prerequisites
+
+* AWS Account
+* Basic knowledge of EC2, IAM, and S3
+* SSH client (Git Bash / Terminal)
+
+---
+
+## 🖥️ Step 1: Launch EC2 Instance
+
+1. Login to AWS Console
+2. Navigate to EC2 Dashboard
+3. Click **Launch Instance**
+
+### Configuration:
+
+* **Name**: `EC2-S3-Demo`
+* **AMI**: Ubuntu Server (Latest LTS)
+* **Instance Type**: `t2.micro`
+* **VPC**: Default
+* **Auto-assign Public IP**: Enable
+
+---
+
+## 🔑 Step 2: Create Key Pair
+
+1. Click **Create new key pair**
+2. Provide:
+
+   * Name: `ec2-key`
+   * Type: RSA
+   * Format: `.pem`
+3. Download and save securely
+
+---
+
+## 🔥 Step 3: Configure Security Group
+
+* Create new security group
+* Allow:
+
+  * SSH (Port 22)
+  * Source: `0.0.0.0/0` (for learning)
+
+---
+
+## 🚀 Step 4: Launch Instance
+
+* Click **Launch Instance**
+* Wait until status is **Running**
+* Copy the **Public IP**
+
+---
+
+## 🔐 Step 5: Connect to EC2 via SSH
+
+```bash id="c9l6ff"
+chmod 400 ec2-key.pem
+```
+
+```bash id="zttc2q"
+ssh -i ec2-key.pem ubuntu@your-public-ip
+```
+
+---
+
+## 🪣 Step 6: Create S3 Bucket (Console)
+
+1. Go to S3 service
+2. Click **Create bucket**
+
+### Configuration:
+
+* Bucket name: `my-demo-bucket-16042026` (must be globally unique)
+* Region: ap-south-1
+* Keep default settings
+* Click **Create**
+
+---
+
+## 🔐 Step 7: Create IAM Role (Instance Profile)
+
+1. Go to IAM → Roles → Create role
+2. Select:
+
+   * AWS Service → EC2
+3. Attach policy:
+
+   * `AmazonS3FullAccess` *(or custom least privilege policy)*
+4. Name the role: `EC2-S3-Role`
+5. Create role
+
+---
+
+## 🔗 Step 8: Attach IAM Role to EC2
+
+1. Go to EC2 → Instances
+2. Select your instance
+3. Click:
+
+   * Actions → Security → Modify IAM Role
+4. Attach: `EC2-S3-Role`
+
+---
+
+## 📂 Step 9: Create Sample Files
+
+```bash id="vdwjo1"
+echo "Hello AWS S3" > file.txt
+```
+
+```bash id="p8zgbw"
+wget https://via.placeholder.com/150 -O image.png
+```
+
+```bash id="mnv14m"
+curl -o sample.pdf https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+```
+
+---
+
+## ⬆️ Step 10: Upload Files to S3
+
+```bash id="2t6a8i"
+aws s3 cp file.txt s3://my-demo-bucket-16042026/
+```
+
+```bash id="eqmb7x"
+aws s3 cp image.png s3://my-demo-bucket-16042026/
+```
+
+```bash id="gdxr6c"
+aws s3 cp sample.pdf s3://my-demo-bucket-16042026/
+```
+
+---
+
+## ✅ Step 11: Verify Upload
+
+### Using CLI:
+
+```bash id="n7p4e4"
+aws s3 ls s3://my-demo-bucket-16042026/
+```
+
+### Using AWS Console:
+
+* Navigate to S3
+* Open your bucket
+* Verify uploaded files:
+
+  * `file.txt`
+  * `image.png`
+  * `sample.pdf`
+
+---
+
+## 🎯 Outcome
+
+<img width="1045" height="853" alt="2 1" src="https://github.com/user-attachments/assets/d12d752f-63cd-425d-9181-1889d78e6cc8" />
+
+---
+
+<img width="1885" height="869" alt="2 2" src="https://github.com/user-attachments/assets/9d7427a2-6b37-40f2-b0b9-f32d856c5b8d" />
+
+---
+
+# 🚀 Task 3 :  EC2 User Data Automation (Nginx & Docker Containers)
+
+## 📌 Overview
+
+This task demonstrates how to automate EC2 instance configuration using **User Data scripts**:
+
+* Task 1: Deploy Nginx automatically on EC2
+* Task 2: Install Docker and run Apache & Nginx containers automatically
+* Access applications via public IP and ports
+
+---
+
+## 🛠️ Prerequisites
+
+* AWS Account
+* Basic knowledge of EC2 and networking
+* SSH client (Terminal / Git Bash)
+
+---
+
+# 🧩 Task 1: EC2 with Nginx using User Data
+
+## 🖥️ Step 1: Launch EC2 Instance
+
+1. Login to AWS Console
+2. Navigate to EC2 → Launch Instance
+
+### Configuration:
+
+* **Name**: `Nginx-Server`
+* **AMI**: Ubuntu Server (Latest LTS)
+* **Instance Type**: `t2.micro`
+* **VPC**: Default
+* **Auto-assign Public IP**: Enable
+
+---
+
+## 🔑 Step 2: Create Key Pair
+
+* Create a new key pair (e.g., `my-key.pem`)
+* Download and store securely
+
+---
+
+## 🔥 Step 3: Security Group
+
+Allow:
+
+* SSH (Port 22)
+* HTTP (Port 80)
+
+---
+
+## ⚙️ Step 4: Add User Data Script
+
+Paste the following script in **Advanced Details → User Data**:
+
+```bash id="v67sfy"
+#!/bin/bash
+apt update -y
+apt install nginx -y
+systemctl start nginx
+systemctl enable nginx
+```
+
+---
+
+## 🚀 Step 5: Launch and Verify
+
+* Launch instance
+* Wait until status is **Running**
+
+### Access Nginx:
+
+```
+http://your-ec2-public-ip
+```
+
+✔ Nginx welcome page should be visible
+
+---
+
+## 🎯 Task 1 Outcome
+
+* EC2 instance created
+* Nginx installed automatically
+* Web server accessible via port 80
+
+---
+
+# 🧩 Task 2: EC2 with Docker, Apache & Nginx Containers
+
+## 🖥️ Step 1: Launch EC2 Instance
+
+* **Name**: `Docker-Server`
+* Same configuration:
+
+  * Ubuntu OS
+  * Public IP enabled
+  * Key pair attached
+
+---
+
+## 🔥 Step 2: Security Group
+
+Allow:
+
+* SSH (Port 22)
+* HTTP (Port 80)
+* Custom TCP (Port 8080)
+
+---
+
+## ⚙️ Step 3: Add User Data Script
+
+Paste the following:
+
+```bash id="1zcf6o"
+#!/bin/bash
+apt update -y
+apt install docker.io -y
+systemctl start docker
+systemctl enable docker
+
+# Pull Docker images
+docker pull nginx
+docker pull httpd
+
+# Run Nginx container (Port 80)
+docker run -d -p 80:80 --name nginx-container nginx
+
+# Run Apache container (Port 8080)
+docker run -d -p 8080:80 --name apache-container httpd
+```
+
+---
+
+## 🚀 Step 4: Launch and Verify
+
+* Launch instance
+* Wait until running
+
+---
+
+## 🌐 Access Applications
+
+### Nginx:
+
+```
+http://your-ec2-public-ip:80
+```
+
+### Apache:
+
+```
+http://your-ec2-public-ip:8080
+```
+
+---
+
+## 🎯 Task 2 Outcome
+
+* EC2 instance created
+* Docker installed automatically
+* Nginx container running on port 80
+* Apache container running on port 8080
+
+---
+
+## 📌 Key Concept: User Data
+
+* User Data is a **startup script** executed automatically during EC2 launch
+* Used for automation and configuration management
+
+---
+
+## ⚠️ Troubleshooting
+
+* Check running containers:
+
+```bash id="t0dj2y"
+docker ps
+```
+
+* Check user data logs:
+
+```bash id="mvig1m"
+cat /var/log/cloud-init-output.log
+```
+
+* Ensure ports are open in security group
+
+---
+
+## 📌 Best Practices
+
+* Use user data for automation
+* Keep scripts idempotent
+* Restrict security group access in production
+* Monitor instance and container health
+
+---
+
+## 🧾 Resume One-Liners
+
+**Task 1:**
+Provisioned EC2 instance and automated Nginx deployment using user data scripts.
+
+**Task 2:**
+Automated Docker installation and deployed Apache and Nginx containers on EC2 using user data.
+
+---
+
+
+
+
+
 
 
