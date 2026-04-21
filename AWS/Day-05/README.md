@@ -272,6 +272,101 @@ stress --cpu 2 --timeout 300
 <img width="1920" height="488" alt="Screenshot (916)" src="https://github.com/user-attachments/assets/119a67bb-78f1-4f1f-8fd7-016d1a546ef4" />
 
 ---
+# 🚀 Update Launch Template (Apache ➝ Nginx) & Apply to Auto Scaling Group
+
+## 📌 Overview
+
+This task demonstrates how to update an existing AWS Launch Template by replacing Apache user data with Nginx configuration, apply the updated template to an Auto Scaling Group (ASG), and verify the deployment.
+
+---
+
+## 🧱 Prerequisites
+
+* Existing Launch Template (with Apache setup)
+* Existing Auto Scaling Group using that template
+* Basic knowledge of EC2 and ASG
+
+---
+
+## ⚙️ Step 1: Create New Version of Launch Template
+
+* Go to AWS Console → EC2 → **Launch Templates**
+* Select existing template: `apache-template`
+* Click **Actions → Modify template (Create new version)**
+
+---
+
+## 📜 Step 2: Update User Data (Replace Apache with Nginx)
+
+### 🔹 For Ubuntu:
+
+```bash
+#!/bin/bash
+apt update -y
+apt install nginx -y
+systemctl start nginx
+systemctl enable nginx
+
+echo "<h1>Nginx - Hello from Your Name!</h1>" > /var/www/html/index.html
+```
+
+---
+
+* Click **Create template version**
+
+---
+
+## 🔄 Step 3: Update Auto Scaling Group
+
+* Go to EC2 → **Auto Scaling Groups**
+* Select your ASG (e.g., `apache-asg`)
+* Click **Edit**
+* Under Launch Template → Select **Latest Version**
+* Click **Update**
+
+---
+
+## 🔁 Step 4: Refresh Instances
+
+### Option 1: Instance Refresh (Recommended)
+
+* In ASG → Click **Instance Refresh**
+* Start refresh with rolling update
+
+### Option 2: Manual Replacement
+
+* Terminate existing instances
+* ASG will automatically launch new instances
+
+---
+
+## 🌐 Step 5: Verify Nginx Deployment
+
+* Go to EC2 → Instances
+* Copy Public IP of new instance
+
+Open in browser:
+
+```
+http://<Public-IP>
+```
+
+### ✅ Expected Output:
+
+```
+Nginx - Hello from Your Name!
+```
+---
+
+## 🧠 Key Learnings
+
+* Launch Template versioning enables easy updates
+* Auto Scaling Group supports rolling updates
+* User data automates web server configuration
+
+---
+
+
 
 
 
