@@ -358,6 +358,11 @@ Nginx - Hello from Your Name!
 ```
 ---
 
+<img width="1137" height="394" alt="Screenshot (917)" src="https://github.com/user-attachments/assets/b1a8777d-9db0-4248-99a3-aff10d28806c" />
+
+---
+
+
 ## 🧠 Key Learnings
 
 * Launch Template versioning enables easy updates
