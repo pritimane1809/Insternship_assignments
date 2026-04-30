@@ -413,6 +413,185 @@ Even if peering exists, NSG rules can block traffic.
 This lab demonstrates how **NSGs enforce security policies in Azure**, ensuring that even with VNet Peering, traffic can be strictly controlled based on defined rules.
 
 ---
+# 🌐 Step 4: Azure Hub-and-Spoke Network Architecture Lab
+
+## 📌 Objective
+
+Build an **enterprise-grade Hub-and-Spoke architecture** in Azure where:
+
+* A central **Hub VNet** manages routing and shared services
+* Multiple **Spoke VNets** host application workloads
+* Traffic between spokes flows **through the Hub**
+
+---
+
+## 🏗️ Architecture Overview
+
+### 🔹 Hub VNet
+
+* Name: `Priti-Hub-VNet`
+* Address Space: `10.10.0.0/16`
+* Subnet: `10.10.1.0/24`
+
+### 🔹 Spoke VNets
+
+#### Spoke-Dev
+
+* Name: `Priti-Spoke-Dev`
+* Address Space: `10.20.0.0/16`
+* Subnet: `10.20.1.0/24`
+
+#### Spoke-Test
+
+* Name: `Priti-Spoke-Test`
+* Address Space: `10.30.0.0/16`
+* Subnet: `10.30.1.0/24`
+
+---
+
+## 🔗 Network Design
+
+* Hub ↔ Spoke-Dev (Peered)
+* Hub ↔ Spoke-Test (Peered)
+* Spoke-Dev ❌ Spoke-Test (No direct peering)
+
+---
+
+## 🚀 Step-by-Step Implementation
+
+### 🔹 Step 1: Create Hub VNet
+
+1. Go to Azure Portal → **Virtual Networks**
+2. Click **+ Create**
+3. Configure:
+
+   * Name: `Priti-Hub-VNet`
+   * Address Space: `10.10.0.0/16`
+4. Add Subnet:
+
+   * Name: `Hub-Subnet`
+   * Range: `10.10.1.0/24`
+5. Click **Review + Create → Create**
+
+---
+
+### 🔹 Step 2: Create Spoke VNets
+
+#### 👉 Spoke-Dev
+
+* Name: `Priti-Spoke-Dev`
+* Address Space: `10.20.0.0/16`
+* Subnet: `10.20.1.0/24`
+
+#### 👉 Spoke-Test
+
+* Name: `Priti-Spoke-Test`
+* Address Space: `10.30.0.0/16`
+* Subnet: `10.30.1.0/24`
+
+---
+
+### 🔹 Step 3: Peer Hub ↔ Spoke-Dev
+
+1. Open `Priti-Hub-VNet`
+2. Go to **Peerings → + Add**
+
+Configure:
+
+* Peering Name: `Hub-to-Dev`
+* Remote VNet: `Priti-Spoke-Dev`
+* Reverse Peering: `Dev-to-Hub`
+
+Enable:
+
+* ✔ Allow virtual network access
+* ✔ Allow forwarded traffic ✅
+
+Click **Add**
+
+---
+
+### 🔹 Step 4: Peer Hub ↔ Spoke-Test
+
+1. Open `Priti-Hub-VNet`
+2. Go to **Peerings → + Add**
+
+Configure:
+
+* Peering Name: `Hub-to-Test`
+* Remote VNet: `Priti-Spoke-Test`
+* Reverse Peering: `Test-to-Hub`
+
+Enable:
+
+* ✔ Allow virtual network access
+* ✔ Allow forwarded traffic ✅
+
+Click **Add**
+
+---
+
+## 🔁 Traffic Flow
+
+```text
+Spoke-Dev → Hub → Spoke-Test
+Spoke-Test → Hub → Spoke-Dev
+```
+
+---
+
+## 🧠 Key Concepts
+
+### 🔸 Why Enable "Allow Forwarded Traffic"?
+
+By default, the Hub drops traffic not meant for itself.
+Enabling this setting allows the Hub to act as a **router**, forwarding traffic between spokes.
+
+---
+
+### 🔸 Why Not Peer Spokes Directly?
+
+Direct peering increases complexity:
+
+* 2 VNets → 1 peering
+* 50 VNets → 1,225 peerings ❌
+
+Using Hub:
+
+* 50 VNets → only 50 peerings ✅
+
+---
+
+### 🔸 Real-World Use Cases
+
+Hub VNet typically hosts:
+
+* 🔥 Firewall (Azure Firewall)
+* 🌐 VPN Gateway
+* 📊 Monitoring & Logging tools
+
+Spoke VNets host:
+
+* Applications (Dev/Test/Prod)
+* Microservices
+* Workloads
+
+---
+
+## 🎯 Outcome
+
+* Built scalable Hub-and-Spoke architecture
+* Enabled centralized routing via Hub
+* Reduced network complexity
+* Learned enterprise-grade Azure networking design
+
+---
+
+## 🏁 Conclusion
+
+This lab demonstrates how to design a **secure, scalable, and manageable network architecture** in Azure using the Hub-and-Spoke model, widely used in real-world cloud environments.
+
+---
 
 
 
