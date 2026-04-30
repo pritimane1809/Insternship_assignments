@@ -251,6 +251,169 @@ This lab proves that **Azure VNet Peering enables private, secure, and high-spee
 
 ---
 
+# 🔐 Step 3 : Azure NSG and Traffic Control Lab
+
+## 📌 Objective
+
+Understand how **Network Security Groups (NSGs)** control traffic between peered Virtual Networks by:
+
+* Blocking traffic (ICMP/Ping)
+* Allowing traffic using priority rules
+
+---
+
+## 🏗️ Architecture Overview
+
+* **VNet-Dev**
+
+  * CIDR: `10.0.0.0/16`
+
+* **VNet-Test**
+
+  * CIDR: `10.1.0.0/16`
+  * Subnet: `10.1.1.0/24`
+
+* **NSG**
+
+  * Name: `NSG-Test`
+  * Attached to: `Test-Subnet`
+
+---
+
+## 🚀 Step-by-Step Implementation
+
+### 🔹 Step 1: Create Network Security Group
+
+1. Go to Azure Portal → **Network Security Groups**
+2. Click **+ Create**
+3. Fill details:
+
+   * Name: `NSG-Test`
+   * Resource Group: `RG-Networking`
+   * Region: Same as VNets
+4. Click **Review + Create → Create**
+
+---
+
+### 🔹 Step 2: Associate NSG with Subnet
+
+1. Open `NSG-Test`
+2. Go to **Subnets**
+3. Click **+ Associate**
+4. Select:
+
+   * Virtual Network: `Priti-VNet-Test`
+   * Subnet: `Test-Subnet`
+5. Click **OK**
+
+---
+
+## 🚫 Step 3: Add Deny Rule (Block Ping)
+
+1. Go to **Inbound Security Rules**
+2. Click **+ Add**
+
+Configure:
+
+* Source: Any
+* Destination: Any
+* Protocol: ICMP
+* Action: Deny
+* Priority: `200`
+* Name: `Deny-Ping`
+
+Click **Add**
+
+---
+
+## 🧪 Step 4: Test Connectivity
+
+From `VM-Dev`, run:
+
+```bash id="q5n5n9"
+ping 10.1.1.4
+```
+
+❌ Expected Result:
+
+* Ping fails (Request timed out)
+
+---
+
+<img width="486" height="95" alt="T3 1" src="https://github.com/user-attachments/assets/9dfac54f-1aa5-457f-b564-8f05fa042d9b" />
+
+---
+
+## ✅ Step 5: Add Allow Rule (Override Deny)
+
+1. Click **+ Add** in Inbound Rules
+
+Configure:
+
+* Source: IP Addresses
+* Source IP: `10.0.0.0/16`
+* Destination: Any
+* Protocol: ICMP
+* Action: Allow
+* Priority: `100`
+* Name: `Allow-Ping-From-Dev`
+
+Click **Add**
+
+---
+
+<img width="734" height="320" alt="T3 2" src="https://github.com/user-attachments/assets/4ef0eb06-9e1d-4eb0-b50b-777de4bc3ec5" />
+
+---
+
+## 🧠 Key Concepts
+
+### 🔸 NSG Rule Priority
+
+* Lower number = Higher priority
+* Rule with priority `100` is processed before `200`
+
+---
+
+### 🔸 Why Did It Work the Second Time?
+
+The **Allow rule (priority 100)** was evaluated before the **Deny rule (priority 200)**, so traffic was permitted.
+
+---
+
+### 🔸 Does VNet Peering Override NSG?
+
+❌ No
+
+* VNet Peering = Network connection (road)
+* NSG = Traffic control (security checkpoint)
+
+Even if peering exists, NSG rules can block traffic.
+
+---
+
+## ✅ Validation Checklist
+
+* ✔ Ping fails after Deny rule
+* ✔ Ping succeeds after Allow rule
+* ✔ NSG correctly controls traffic
+
+---
+
+## 🎯 Outcome
+
+* Implemented NSG as a firewall
+* Controlled traffic between VNets
+* Understood rule priority and evaluation
+
+---
+
+## 🏁 Conclusion
+
+This lab demonstrates how **NSGs enforce security policies in Azure**, ensuring that even with VNet Peering, traffic can be strictly controlled based on defined rules.
+
+---
+
 
 
 
