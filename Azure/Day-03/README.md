@@ -206,6 +206,10 @@ ping google.com
 
 ---
 
+<img width="832" height="183" alt="05" src="https://github.com/user-attachments/assets/4addff40-99fe-43a0-90bd-c60cbb6eb747" />
+
+---
+
 ## 🧠 Key Learnings
 
 * Subnet-based NSGs enforce **automatic security**
@@ -241,9 +245,7 @@ ping google.com
 
 ---
 
-<img width="832" height="183" alt="05" src="https://github.com/user-attachments/assets/4addff40-99fe-43a0-90bd-c60cbb6eb747" />
 
----
 
 
 
