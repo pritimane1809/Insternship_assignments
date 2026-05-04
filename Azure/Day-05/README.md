@@ -183,6 +183,196 @@ In this lab, you learned how to:
 
 ---
 
+# 🔐 Azure Hands-On Lab 2
+
+## Securely Access Azure Storage from a VM using Managed Identities
+
+---
+
+## 📌 Overview
+
+This lab demonstrates how to securely access Azure Storage from a Virtual Machine **without using passwords or access keys**, by leveraging **Managed Identities** and **RBAC (Role-Based Access Control)**.
+
+---
+
+## 🧱 Step 1: Create the Storage Account
+
+### 🎯 Objective
+
+Create a storage service to store data securely.
+
+### 🛠️ Steps
+
+1. Go to **Azure Portal** → Search **Storage Accounts**
+2. Click **+ Create**
+3. Configure Basics:
+
+* **Resource Group:** `RG-<your-name>-StorageLab`
+* **Storage Account Name:** `labstorage<yourname><random>` *(globally unique, lowercase)*
+* **Region:** Same as VM
+* **Performance:** Standard
+* **Redundancy:** LRS
+
+4. Click **Review + Create → Create**
+
+✅ Storage account is ready.
+
+---
+
+## 📂 Step 2: Create a Blob Container
+
+### 🎯 Objective
+
+Create a container to store files (blobs).
+
+### 🛠️ Steps
+
+1. Go to **Storage Account → Go to resource**
+2. Navigate to **Data Storage → Containers**
+3. Click **+ Container**
+4. Configure:
+
+* **Name:** `lab-data-<yourname>`
+* **Access Level:** Private *(no anonymous access)*
+
+5. Click **Create**
+
+✅ Container is created successfully.
+
+---
+
+## 🆔 Step 3: Enable Managed Identity on VM
+
+### 🎯 Objective
+
+Allow the VM to authenticate securely with Azure services.
+
+### 🛠️ Steps
+
+1. Go to **Virtual Machines → Select your VM**
+2. Navigate to **Security + Networking → Identity**
+3. Under **System Assigned**, set:
+
+* **Status:** On
+
+4. Click **Save → Yes**
+
+✅ VM now has an identity in Azure Entra ID.
+
+---
+
+## 🔐 Step 4: Grant Access using RBAC
+
+### 🎯 Objective
+
+Allow the VM to access storage securely.
+
+### 🛠️ Steps
+
+1. Go to your **Storage Account**
+2. Click **Access Control (IAM)**
+3. Click **+ Add → Add role assignment**
+
+### Role Configuration
+
+* **Role:** Storage Blob Data Contributor
+
+### Member चयन (Selection)
+
+1. Assign access to → **Managed Identity**
+2. Click **+ Select Members**
+3. Choose:
+
+   * Subscription
+   * Managed Identity Type → Virtual Machine
+   * Select your VM
+4. Click **Select → Review + Assign**
+
+⏳ *Wait 1–2 minutes for role propagation.*
+
+✅ VM now has access to storage.
+
+---
+
+## 🧪 Step 5: Test Access from VM
+
+### 🎯 Objective
+
+Verify secure access without credentials.
+
+### 🛠️ Steps
+
+### 1. Login to VM
+
+* Linux → SSH
+* Windows → RDP
+
+---
+
+### 2. Authenticate using Managed Identity
+
+Run:
+
+```bash
+az login --identity
+```
+
+✅ You should see a successful login response.
+
+---
+
+### 3. Create & Upload File
+
+#### For Windows / Linux:
+
+```bash
+echo "Hello from the VM!" > testfile.txt
+```
+
+```bash
+az storage blob upload \
+  --account-name YOUR_STORAGE_ACCOUNT_NAME \
+  --container-name <container-name> \
+  --name testfile.txt \
+  --file testfile.txt \
+  --auth-mode login
+```
+
+⚠️ Replace:
+
+* `YOUR_STORAGE_ACCOUNT_NAME`
+* `<container-name>`
+
+---
+
+### 4. Verify Upload
+
+1. Go to **Azure Portal**
+2. Navigate:
+   **Storage Account → Containers → your container**
+3. Check for: `testfile.txt`
+
+✅ File should be successfully uploaded.
+
+---
+
+## 📚 Conclusion
+
+In this lab, you learned how to:
+
+* Enable **Managed Identity** for a VM
+* Use **RBAC** to grant secure access
+* Access Azure Storage **without secrets or keys**
+* Upload data securely using Azure CLI
+
+---
+
+## 💡 Key Takeaway
+
+Using Managed Identities eliminates the need for storing credentials, making your cloud architecture **more secure and production-ready**.
+
+---
+
 
 
 
