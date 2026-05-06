@@ -47,7 +47,9 @@ This lab demonstrates how to:
 
 ---
 
+<img width="908" height="624" alt="02" src="https://github.com/user-attachments/assets/cef30ad1-3487-4137-9289-a61f5ce94648" />
 
+---
 
 ### 3. Create Virtual Machine (Jumpbox)
 
@@ -59,6 +61,10 @@ This lab demonstrates how to:
 
 ---
 
+<img width="1429" height="559" alt="03" src="https://github.com/user-attachments/assets/c343c838-734c-4204-afa1-3aaef4130582" />
+
+---
+
 ### 4. Create Azure Container Registry (ACR)
 
 * Name: `<your-name>acr`
@@ -66,6 +72,9 @@ This lab demonstrates how to:
 
 ---
 
+<img width="1410" height="486" alt="04" src="https://github.com/user-attachments/assets/cd56c4ae-02bd-4433-8f64-b0a2c7f22b44" />
+
+---
 ### 5. Connect to VM
 
 ```bash
@@ -74,6 +83,9 @@ ssh azureuser@<VM-Public-IP>
 
 ---
 
+<img width="1025" height="710" alt="05" src="https://github.com/user-attachments/assets/85112b98-71a5-49df-80c3-2a52b6139fdc" />
+
+---
 ### 6. Install Docker & Azure CLI
 
 ```bash
@@ -91,6 +103,9 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 ---
 
+<img width="625" height="266" alt="06" src="https://github.com/user-attachments/assets/87ada394-602a-4ee1-ba89-83ef494da2ac" />
+
+---
 ### 7. Create Web App (Version 1)
 
 ```bash
@@ -142,6 +157,9 @@ EXPOSE 80
 
 ---
 
+<img width="959" height="971" alt="07" src="https://github.com/user-attachments/assets/6bb30fdd-2d39-44e2-b059-b567914fa8fd" />
+
+---
 ### 8. Build & Push Image to ACR
 
 ```bash
@@ -154,6 +172,10 @@ docker push <your-name>acr.azurecr.io/webapp:v1
 
 ---
 
+<img width="984" height="960" alt="08" src="https://github.com/user-attachments/assets/5492029e-086e-40f1-a578-8744a1b81c77" />
+
+---
+
 ### 9. Create AKS Cluster
 
 * Name: `<your-name>-aks-public`
@@ -163,6 +185,11 @@ docker push <your-name>acr.azurecr.io/webapp:v1
 * Public access enabled
 
 ---
+
+<img width="1404" height="478" alt="09" src="https://github.com/user-attachments/assets/8ed77e2b-026c-4bb8-9671-5fb455221bbc" />
+
+---
+
 
 ### 10. Attach ACR to AKS
 
@@ -224,11 +251,6 @@ kubectl apply -f deployment.yaml
 kubectl get svc
 ```
 
-➡️ Open in browser:
-
-```
-http://<EXTERNAL-IP>
-```
 
 ---
 
@@ -288,12 +310,15 @@ kubectl rollout status deployment/webapp
 
 ---
 
-## 🧹 Cleanup (Optional)
-
-```bash
-az group delete --name <your-name>-rg-aks-lab --yes --no-wait
-```
+<img width="957" height="969" alt="Screenshot (990)" src="https://github.com/user-attachments/assets/120ac6e0-db74-4be7-9d20-270414d957e3" />
 
 ---
 
-✨ Lab completed successfully!
+<img width="956" height="816" alt="Screenshot (991)" src="https://github.com/user-attachments/assets/d1cfa064-9abb-4084-b8fc-a33aefef6f74" />
+
+---
+
+
+
+
+
