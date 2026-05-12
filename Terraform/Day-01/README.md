@@ -314,48 +314,6 @@ Terraform updates the EC2 instance configuration.
 
 ---
 
-# Terraform Refresh vs Terraform Plan
-
-## Terraform Refresh
-
-```bash
-terraform refresh
-```
-
-### Purpose
-
-- Updates Terraform state file
-- Syncs state with actual cloud infrastructure
-- Detects manual changes done outside Terraform
-
----
-
-## Terraform Plan
-
-```bash
-terraform plan
-```
-
-### Purpose
-
-- Compares:
-  - Terraform code
-  - Terraform state
-  - Actual infrastructure
-
-- Shows upcoming changes before applying them
-
----
-
-# Difference Between Refresh and Plan
-
-| Command | Purpose |
-|----------|----------|
-| terraform refresh | Syncs Terraform state with real infrastructure |
-| terraform plan | Shows infrastructure changes Terraform will perform |
-
----
-
 # Important Terraform Commands
 
 ## 1. terraform validate
@@ -420,15 +378,3 @@ After completing this lab, you will understand:
 - Terraform debugging commands
 
 ---
-
-# References
-
-- Terraform Documentation: https://developer.hashicorp.com/terraform/docs
-- Terraform Registry: https://registry.terraform.io/
-- AWS Provider Docs: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
-
----
-
-# Author
-
-Priti Mane
