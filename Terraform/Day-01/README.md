@@ -212,6 +212,11 @@ An EC2 instance will be created in AWS.
 
 ---
 
+<img width="1652" height="103" alt="05" src="https://github.com/user-attachments/assets/0ddf2b45-f4fa-4d80-a59b-cee05107ed04" />
+
+---
+
+
 # Step 11: Destroy Infrastructure
 
 ```bash
