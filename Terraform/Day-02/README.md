@@ -711,3 +711,304 @@ After completing this lab, you will understand:
 
 ---
 
+
+# Task 6 : Terraform Lab – Using Outputs to Retrieve Resource Information
+
+## Objective
+
+This lab demonstrates how to use Terraform `output` blocks to print and retrieve important AWS resource information after deployment.
+
+Outputs are useful for displaying:
+
+- Resource IDs
+- Public IP addresses
+- Bucket names
+- ARNs
+- Security Group IDs
+- Connection details
+
+This lab covers:
+
+- Terraform outputs
+- Resource attribute retrieval
+- AWS infrastructure deployment
+- Output commands in Terraform
+
+---
+
+# Step 1: Create Project Directory
+
+```bash
+mkdir terraform-outputs-lab
+cd terraform-outputs-lab
+```
+
+---
+
+# Step 2: Create Terraform Configuration
+
+Create a file named `main.tf`
+
+```bash
+vi main.tf
+```
+
+Add the following configuration:
+
+```hcl
+provider "aws" {
+  region = "ap-south-1"
+}
+
+# Security Group
+resource "aws_security_group" "my_sg" {
+  name = "terraform-output-sg"
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "Terraform-Output-SG"
+  }
+}
+
+# EC2 Instance
+resource "aws_instance" "my_ec2" {
+  ami                    = "ami-03f4878755434977f"
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = [aws_security_group.my_sg.id]
+
+  tags = {
+    Name = "Terraform-Output-EC2"
+  }
+}
+
+# S3 Bucket
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "priti-terraform-output-bucket"
+
+  tags = {
+    Name = "Terraform-Output-Bucket"
+  }
+}
+```
+
+> Replace the bucket name with a globally unique bucket name.
+
+---
+
+# Step 3: Create Outputs File
+
+Create a file named `outputs.tf`
+
+```bash
+vi outputs.tf
+```
+
+Add the following output blocks:
+
+```hcl
+# EC2 Instance ID
+output "ec2_instance_id" {
+  value = aws_instance.my_ec2.id
+}
+
+# EC2 Public IP
+output "ec2_public_ip" {
+  value = aws_instance.my_ec2.public_ip
+}
+
+# Security Group ID
+output "security_group_id" {
+  value = aws_security_group.my_sg.id
+}
+
+# S3 Bucket Name
+output "s3_bucket_name" {
+  value = aws_s3_bucket.my_bucket.bucket
+}
+
+# EC2 ARN
+output "ec2_arn" {
+  value = aws_instance.my_ec2.arn
+}
+```
+
+---
+
+# Step 4: Configure AWS Credentials
+
+If AWS CLI is not configured, run:
+
+```bash
+aws configure
+```
+
+Provide:
+
+- AWS Access Key
+- Secret Access Key
+- Region
+- Output format
+
+---
+
+# Step 5: Initialize Terraform
+
+```bash
+terraform init
+```
+
+### Purpose
+
+- Downloads AWS provider plugins
+- Initializes Terraform working directory
+
+---
+
+# Step 6: Validate Configuration
+
+```bash
+terraform validate
+```
+
+### Purpose
+
+Checks Terraform syntax and configuration correctness.
+
+---
+
+# Step 7: Format Terraform Files
+
+```bash
+terraform fmt
+```
+
+### Purpose
+
+Formats Terraform code automatically.
+
+---
+
+# Step 8: Preview Infrastructure Changes
+
+```bash
+terraform plan
+```
+
+### Purpose
+
+Displays resources Terraform will create or modify.
+
+Expected resources:
+
+- EC2 Instance
+- Security Group
+- S3 Bucket
+
+---
+
+# Step 9: Deploy Infrastructure
+
+```bash
+terraform apply
+```
+
+Type:
+
+```bash
+yes
+```
+
+### Resources Created
+
+- EC2 Instance
+- Security Group
+- S3 Bucket
+
+Terraform also prints output values after deployment.
+
+---
+
+# Output
+
+<img width="827" height="162" alt="03" src="https://github.com/user-attachments/assets/21f43a23-4fdc-4cc1-b06d-182110ca6940" />
+
+---
+
+# Step 10: Retrieve Outputs Anytime
+
+## Show All Outputs
+
+```bash
+terraform output
+```
+
+---
+
+## Show Specific Output
+
+Example:
+
+```bash
+terraform output ec2_public_ip
+```
+
+---
+
+# Step 13: Destroy Infrastructure
+
+```bash
+terraform destroy
+```
+
+Type:
+
+```bash
+yes
+```
+
+### Purpose
+
+Deletes all Terraform-managed resources.
+
+---
+
+# Common Resource Attributes Used in Outputs
+
+| Resource | Common Attributes |
+|----------|-------------------|
+| EC2 | id, public_ip, private_ip, arn |
+| S3 | bucket, arn |
+| Security Group | id, name |
+| RDS | endpoint |
+| Load Balancer | dns_name |
+
+---
+
+# Learning Outcomes
+
+After completing this lab, you will understand:
+
+- Terraform output blocks
+- Retrieving AWS resource attributes
+- Infrastructure visibility using outputs
+- Using outputs for automation and scripting
+
+---
+
+<img width="1012" height="93" alt="01" src="https://github.com/user-attachments/assets/5caab918-83dc-4f38-9a77-0cf826606c89" />
+
+---
+
+<img width="1408" height="230" alt="02" src="https://github.com/user-attachments/assets/b22d59aa-c26c-4bb5-9283-70a7346e02ae" />
+
+---
+
+
+
+
