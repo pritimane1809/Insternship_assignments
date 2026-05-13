@@ -1008,6 +1008,307 @@ After completing this lab, you will understand:
 <img width="1408" height="230" alt="02" src="https://github.com/user-attachments/assets/b22d59aa-c26c-4bb5-9283-70a7346e02ae" />
 
 ---
+# Task 07: Terraform Lab – Using Sensitive Variables in Terraform
+
+## Objective
+
+This lab demonstrates how to use sensitive variables in Terraform using:
+
+```hcl
+sensitive = true
+```
+
+Sensitive variables help protect confidential information such as:
+
+- Passwords
+- API Keys
+- Tokens
+- Database credentials
+- Secret values
+
+This lab also demonstrates how Terraform masks sensitive values in outputs and logs.
+
+---
+
+# Prerequisites
+
+Before starting, ensure you have:
+
+- Terraform installed
+- AWS Account
+- AWS CLI configured
+- Linux/Ubuntu/macOS/WSL terminal
+
+---
+
+# Step 1: Create Project Directory
+
+```bash
+mkdir terraform-sensitive-vars-lab
+cd terraform-sensitive-vars-lab
+```
+
+---
+
+# Step 2: Create Variables File
+
+Create a file named `variables.tf`
+
+```bash
+nano variables.tf
+```
+
+Add the following configuration:
+
+```hcl
+# Normal Variable
+variable "instance_name" {
+  description = "EC2 Instance Name"
+  type        = string
+}
+
+# Sensitive Variable
+variable "db_password" {
+  description = "Database Password"
+  type        = string
+  sensitive   = true
+}
+```
+
+---
+
+# Understanding Sensitive Variables
+
+Example:
+
+```hcl
+sensitive = true
+```
+
+### Purpose
+
+Terraform masks the value in:
+
+- CLI output
+- Terraform logs
+- Output blocks
+
+This helps prevent accidental exposure of secrets.
+
+---
+
+# Step 3: Create Main Terraform Configuration
+
+Create a file named `main.tf`
+
+```bash
+nano main.tf
+```
+
+Add the following configuration:
+
+```hcl
+provider "aws" {
+  region = "ap-south-1"
+}
+
+# EC2 Instance
+resource "aws_instance" "my_ec2" {
+  ami           = "ami-03f4878755434977f"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = var.instance_name
+  }
+}
+```
+
+---
+
+# Step 4: Create Outputs File
+
+Create a file named `outputs.tf`
+
+```bash
+nano outputs.tf
+```
+
+Add the following outputs:
+
+```hcl
+# Normal Output
+output "instance_name" {
+  value = var.instance_name
+}
+
+# Sensitive Output
+output "database_password" {
+  value     = var.db_password
+  sensitive = true
+}
+```
+
+---
+
+# Step 5: Create terraform.tfvars File
+
+Create file:
+
+```bash
+nano terraform.tfvars
+```
+
+Add:
+
+```hcl
+instance_name = "Terraform-Sensitive-Lab"
+
+db_password = "MySuperSecretPassword123"
+```
+
+---
+
+# Step 6: Configure AWS Credentials
+
+If AWS CLI is not configured, run:
+
+```bash
+aws configure
+```
+
+Provide:
+
+- AWS Access Key
+- Secret Access Key
+- Region
+- Output format
+
+---
+
+# Step 7: Initialize Terraform
+
+```bash
+terraform init
+```
+---
+
+# Step 8: Validate Configuration
+
+```bash
+terraform validate
+```
+---
+
+# Step 9: Format Terraform Files
+
+```bash
+terraform fmt
+```
+---
+
+# Step 10: Preview Infrastructure Changes
+
+```bash
+terraform plan
+```
+---
+
+# Step 11: Deploy Infrastructure
+
+```bash
+terraform apply
+```
+---
+
+### Observation
+
+- Normal values are visible
+- Sensitive values are masked
+
+---
+
+# Step 12: Retrieve Outputs
+
+## Show All Outputs
+
+```bash
+terraform output
+```
+
+Sensitive values remain hidden.
+
+---
+
+## Show Specific Sensitive Output
+
+Run:
+
+```bash
+terraform output -raw database_password
+```
+
+Terraform displays the actual secret value.
+
+> Use carefully because this exposes the secret in terminal output.
+
+---
+
+# Step 13: Check Terraform State Information
+
+Run:
+
+```bash
+terraform show
+```
+
+Terraform masks sensitive values in standard output.
+
+---
+
+# Important Security Note
+
+Even when marked as sensitive:
+
+- Terraform still stores the actual value in the `.tfstate` file
+- Protect state files carefully
+- Never upload state files to GitHub
+
+---
+
+# Step 14: Destroy Infrastructure
+
+```bash
+terraform destroy
+```
+
+Type:
+
+```bash
+yes
+```
+
+### Purpose
+
+Deletes all Terraform-managed resources.
+
+---
+
+# Learning Outcomes
+
+After completing this lab, you will understand:
+
+- Sensitive variables in Terraform
+- Secret masking behavior
+- Secure infrastructure practices
+- Terraform output protection
+- Managing sensitive data securely
+
+---
+
+<img width="757" height="610" alt="01" src="https://github.com/user-attachments/assets/a73168fb-e045-4cb5-b8f9-8827283f9104" />
+
+---
+
 
 
 
