@@ -1,4 +1,4 @@
-# Terraform Variables Hands-On Lab (AWS)
+# Task 1: Terraform Variables Hands-On Lab (AWS)
 
 ## Objective
 
@@ -365,7 +365,7 @@ After completing this lab, you will understand:
 
 ---
 
-# Terraform Lab – Deploy EC2 Using Multiple Variable Types
+# Task 2 : Terraform Lab – Deploy EC2 Using Multiple Variable Types
 
 ## Objective
 
