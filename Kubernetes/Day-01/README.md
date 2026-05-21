@@ -186,8 +186,9 @@ The warning appears because the client and server versions are slightly differen
 ---
 
 # Installation Verification Screenshot
+---
 
-
+<img width="1144" height="363" alt="Screenshot (1021)" src="https://github.com/user-attachments/assets/073f9178-9b18-41e1-9897-38d01fb64c07" />
 
 ---
 
