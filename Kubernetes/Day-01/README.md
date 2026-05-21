@@ -1,4 +1,4 @@
-# Kubernetes Setup and Basics
+# Day-01 : Kubernetes Setup and Basics
 
 ## What is Kubernetes?
 
@@ -271,42 +271,7 @@ kubectl delete pod <pod-name>
 kubectl delete deployment nginx
 ```
 
----
-
-# Example Deployment YAML
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-
-metadata:
-  name: apache-deployment
-
-spec:
-  replicas: 2
-
-  selector:
-    matchLabels:
-      app: apache
-
-  template:
-    metadata:
-      labels:
-        app: apache
-
-    spec:
-      containers:
-      - name: apache
-        image: httpd:latest
-
-        ports:
-        - containerPort: 80
-```
-
----
-
-# Apply Deployment
-
+---    
 ```bash
 kubectl apply -f deployment.yml
 ```
