@@ -240,6 +240,10 @@ Example:
 ```bash
 kubectl logs nginx-pod
 ```
+---
+
+<img width="1073" height="606" alt="pod-logs" src="https://github.com/user-attachments/assets/2ce8c271-4d72-451a-b1cd-61a815a02eae" />
+
 
 ---
 
