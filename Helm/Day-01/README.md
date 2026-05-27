@@ -310,3 +310,12 @@ kubectl get all
 # 📚 Summary
 
 Helm is an essential Kubernetes tool that simplifies application deployment and management using reusable charts and templates. It helps DevOps engineers automate deployments, manage versions, and perform upgrades and rollbacks efficiently.
+
+---
+# Created first helm chart helloworld
+
+<img width="678" height="258" alt="Screenshot (1035)" src="https://github.com/user-attachments/assets/249be2c5-d996-429a-a3b6-499d9ed530ee" />
+
+---
+
+
