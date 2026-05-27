@@ -317,5 +317,88 @@ Helm is an essential Kubernetes tool that simplifies application deployment and 
 <img width="678" height="258" alt="Screenshot (1035)" src="https://github.com/user-attachments/assets/249be2c5-d996-429a-a3b6-499d9ed530ee" />
 
 ---
+# Helm Chart Example - NGINX Deployment
+
+This project demonstrates how to create and deploy a simple NGINX application using Helm in Kubernetes.
+
+## Prerequisites
+
+- Kubernetes Cluster
+- kubectl installed
+- Helm installed
+
+## Steps Performed
+
+### 1. Create Helm Chart
+
+```bash
+helm create nginx-chart
+```
+
+### 2. Configure Values
+
+Updated `values.yaml` with:
+- Replica count
+- NGINX image
+- Service configuration
+
+### 3. Modify Deployment Template
+
+Configured deployment to use dynamic Helm values for:
+- Image repository
+- Image tag
+- Container port
+
+### 4. Install Helm Chart
+
+```bash
+helm install my-nginx ./nginx-chart
+```
+
+### 5. Verify Deployment
+
+```bash
+kubectl get pods
+kubectl get svc
+helm list
+```
+
+### 6. Upgrade Helm Release
+
+Updated replica count and upgraded release:
+
+```bash
+helm upgrade my-nginx ./nginx-chart
+```
+
+### 7. Rollback Release
+
+```bash
+helm rollback my-nginx 1
+```
+
+## Outcome
+
+- Successfully deployed NGINX using Helm
+- Learned Helm chart structure
+- Performed install, upgrade, and rollback operations
+- Managed Kubernetes resources using Helm
+
+## Useful Commands
+
+```bash
+helm list
+helm status my-nginx
+helm uninstall my-nginx
+```
+---
+<img width="737" height="477" alt="Screenshot (1036)" src="https://github.com/user-attachments/assets/83f39b6d-a9e2-4ebe-b068-11185e5543af" />
+
+---
+
+<img width="946" height="663" alt="Screenshot (1037)" src="https://github.com/user-attachments/assets/adcafecc-aacb-4826-aa51-61f43fe1e295" />
+
+---
+
 
 
